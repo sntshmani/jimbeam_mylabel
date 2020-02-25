@@ -1,0 +1,11 @@
+services:
+  beam_administration.beam_administration_export:
+    class: Drupal\beam_administration\Command\ExportCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+  beam_administration.beam_administration_import:
+    class: Drupal\beam_administration\Command\ImportCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }

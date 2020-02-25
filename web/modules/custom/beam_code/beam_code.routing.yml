@@ -1,0 +1,28 @@
+beam_code.validate_code:
+  path: '/api/1.0/code-validate'
+  defaults:
+    _controller: '\Drupal\beam_code\Controller\CodeAPIController::validate'
+    _title: 'Validate coupon code'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+
+beam_code.generator:
+  path: '/admin/code/generator'
+  defaults:
+    _form: '\Drupal\beam_code\Form\CodeGeneratorForm'
+    _title: 'Generate codes'
+  requirements:
+    _permission: 'generate codes'
+  options:
+    _admin_route: TRUE
+
+beam_code.export:
+  path: '/admin/code/export'
+  defaults:
+    _form: '\Drupal\beam_code\Form\CodeExportForm'
+    _title: 'Export codes'
+  requirements:
+    _permission: 'export code list'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,26 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'block-thanks'
+] %}
+{% block paragraph %}
+  <div {{ attributes.addClass(classes) }}>
+    <div class="thanks__image">
+      <img src="{{ file_url(paragraph.field_image.entity.fileuri) }}" alt="">
+    </div>
+    <div class="thanks__content">
+      {% if not paragraph.field_title.isEmpty() %}
+        <div class="thanks__title">
+          {{ content.field_title }}
+        </div>
+      {% endif %}
+      {% if not paragraph.field_link.isEmpty() %}
+        <div class="thanks__link">
+          {{ content.field_link }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock paragraph %}

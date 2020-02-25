@@ -1,0 +1,6 @@
+{% set classes = 'link-button' %}
+
+{% for item in items %}
+  <div {{ attributes.addClass(classes) }} v-popup>{{ item.content }}</div>
+{% endfor %}
+

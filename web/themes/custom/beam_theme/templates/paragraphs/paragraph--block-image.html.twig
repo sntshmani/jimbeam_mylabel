@@ -1,0 +1,18 @@
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'block-image'
+]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if image_photo %}
+      {{ content.field_image }}
+    {% else %}
+      {{ content.field_image_no_photo }}
+    {% endif %}
+  </div>
+{% endblock paragraph %}

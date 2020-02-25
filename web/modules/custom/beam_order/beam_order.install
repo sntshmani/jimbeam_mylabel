@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\beam_misc\Helper\EntityHelper;
+use Drupal\beam_misc\Helper\OrderHelper;
+
+/**
+ * Install fields: PDF Url (Textfield)
+ */
+function beam_order_update_8001() {
+  $fieldPDF = EntityHelper::createFieldTextfield('PDF Url', FALSE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('pdf_url', 'beam_order', 'beam_order', $fieldPDF);
+}
+
+/**
+ * Uninstall unused fields: language
+ */
+function beam_order_update_8002() {
+  $definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+  if ($field = $definition_update_manager->getFieldStorageDefinition('language', 'beam_order')) {
+    $definition_update_manager->uninstallFieldStorageDefinition($field);
+  }
+}

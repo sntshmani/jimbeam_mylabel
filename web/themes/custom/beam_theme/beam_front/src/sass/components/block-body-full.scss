@@ -1,0 +1,78 @@
+@import '../common/variables';
+
+.page-full {
+  max-width: 75%;
+  margin: 30px auto;
+  .block-body {
+    padding: 10px 10px;
+    .block-body__body {
+      max-width: initial;
+      text-align: left;
+      .faq-title {
+        margin-bottom: 30px;
+        h1 {
+          font-family: $font--tertiary;
+          font-size: 44px;
+          text-align: center;
+          letter-spacing: 2px;
+          margin-top: 80px;
+          font-weight: 500;
+          line-height: 1.2;
+          color: inherit;
+        }
+        h2 {
+          font-family: $font--tertiary;
+          font-size: 30px;
+          text-align: center;
+          letter-spacing: 2px;
+          margin-top: 80px;
+          font-weight: 500;
+          line-height: 1.2;
+          color: inherit;
+        }
+      }
+      .basic-page {
+        h3 {
+          font-family: $font--tertiary;
+          font-size: 28px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 500;
+          line-height: 1.2;
+          margin-bottom: .5rem;
+          color: inherit;
+        }
+        a {
+          text-decoration: none !important;
+          transition: all 0.2s ease-in;
+          color: $blue;
+          &:hover {
+            color: $blue-hover
+          }
+        }
+        p, ul, ol {
+          line-height: 1.2;
+          margin-bottom: 1rem;
+        }
+        ol {
+          list-style: decimal;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-full {
+    .block-body {
+      .block-body__body {
+        .faq-title {
+          h1 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

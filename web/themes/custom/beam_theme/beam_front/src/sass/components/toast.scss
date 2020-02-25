@@ -1,0 +1,33 @@
+@import '../common/variables.scss';
+
+body {
+  .toasted-container {
+    .BeamToast {
+      background-color: white;
+      border: 1px solid $red;
+      color: black;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 20px 35px;
+      box-sizing: border-box;
+      width: auto;
+      height: auto;
+    }
+    &.top-right {
+      top: 47%;
+      left: 47%;
+      right: auto;
+      min-width: auto;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  body {
+    .toasted-container {
+      &.top-right {
+        left: 32%;
+      }
+    }
+  }
+}

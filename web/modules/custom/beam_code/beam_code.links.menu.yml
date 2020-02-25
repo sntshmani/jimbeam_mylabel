@@ -1,0 +1,5 @@
+entity.beam_code.collection:
+  title: 'Codes'
+  route_name: entity.beam_code.collection
+  menu_name: results
+  weight: 1

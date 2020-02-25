@@ -1,0 +1,8 @@
+{% set classes = 'link-button' %}
+
+{% for item in items %}
+  {% set url = item.content['#url'] %}
+  {% set title = item.content['#title'] %}
+  <a {{ attributes.addClass(classes) }} type="button" href="{{ url }}">{{ title }}</a>
+{% endfor %}
+

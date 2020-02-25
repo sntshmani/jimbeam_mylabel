@@ -1,0 +1,28 @@
+<header v-header>
+  <div class="align-items-center">
+    <nav class="navbar navbar-expand-lg p-0 mt10 mb10" id="mainNav">
+      <div class="navbar-brand"><a href="{{ path('<front>') }}"><img class="logo" src="/{{ images_dir }}/logo.png"/></a></div>
+      <div class="container-fluid collapse navbar-collapse justify-content-end align-items-end" id="navbarNavDropdown">
+        {{ menu_main }}
+      </div>
+      <div class="top-menu-right">
+        {% include '@beam_theme/regions/header/location-switcher.html.twig' %}
+        <div class="top-menu-right__bottom">
+          {% include '@beam_theme/regions/header/link-buy.html.twig' %}
+          {% include '@beam_theme/regions/header/social.html.twig' %}
+        </div>
+      </div>
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu-top">
+    {{ menu_main_mobile }}
+  </div>
+  {% include '@beam_theme/regions/header/location-box.html.twig' %}
+  {#{% include directory ~ '/templates/regions/header/search-box.html.twig' %}#}
+</header>

@@ -1,0 +1,5 @@
+entity.beam_country.add_form:
+  route_name: entity.beam_country.add_form
+  title: 'Add Country'
+  appears_on:
+    - entity.beam_country.collection

@@ -1,0 +1,5 @@
+services:
+  beam_country.route_subscriber:
+    class: Drupal\beam_country\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

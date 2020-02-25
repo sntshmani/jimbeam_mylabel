@@ -1,0 +1,7 @@
+name: 'Beam Misc'
+type: module
+description: 'Beam Miscelanea'
+core: 8.x
+package: 'Beam'
+'interface translation project': beam_misc
+'interface translation server pattern': modules/custom/beam_misc/translations/%language.po

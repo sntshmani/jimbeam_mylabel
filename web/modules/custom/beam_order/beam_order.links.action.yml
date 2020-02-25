@@ -1,0 +1,5 @@
+beam_order.export:
+  route_name: beam_order.export
+  title: 'Export orders'
+  appears_on:
+    - entity.beam_order.collection

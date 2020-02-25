@@ -1,0 +1,19 @@
+add order entities:
+  title: 'Create new Order entities'
+
+administer order entities:
+  title: 'Administer Order entities'
+  description: 'Allow to access the administration form to configure Order entities.'
+  restrict access: true
+
+delete order entities:
+  title: 'Delete Order entities'
+
+edit order entities:
+  title: 'Edit Order entities'
+
+view order entities:
+  title: 'View Order entities'
+
+export order list:
+  title: 'Export Order list'

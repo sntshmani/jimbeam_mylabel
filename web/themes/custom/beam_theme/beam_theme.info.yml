@@ -1,0 +1,14 @@
+name: beam_theme
+type: theme
+description: 'Beam Theme'
+package: Beam
+core: 8.x
+libraries:
+  - beam_theme/global-styling
+
+base theme: false
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer

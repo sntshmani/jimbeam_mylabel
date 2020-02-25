@@ -1,0 +1,15 @@
+#edit-order-view {
+  position: relative;
+}
+
+#edit-order-view #edit-change {
+  position: absolute;
+  left: 200px;
+  bottom: 33px;
+}
+
+#edit-order-view #edit-actions-order {
+  position: absolute;
+  bottom: 70px;
+  left: 400px;
+}

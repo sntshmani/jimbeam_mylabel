@@ -1,0 +1,166 @@
+@import '../../common/variables.scss';
+
+.step-1 {
+  text-align: center;
+  padding-bottom: 75px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  &__wrapper-bottles {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+  }
+  &__wrapper-bottle {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    &.disabled-bottle {
+      pointer-events: none;
+    }
+    .wrapper-image {
+      height: 100%;
+    }
+    img {
+      max-height: calc(100vh - 385px);
+      max-width: calc(100vw - 200px);
+      height: 100%;
+      display: inline-block;
+      filter: gray;
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+      opacity: .3;
+      &:hover {
+        -webkit-filter: none;
+        filter: none;
+        opacity: .3;
+        cursor: pointer;
+      }
+      &.active {
+        -webkit-filter: none;
+        filter: none;
+        opacity: 1;
+      }
+    }
+    .link-button {
+      opacity: .3;
+    }
+    &:hover, &.active {
+      .link-button {
+        opacity: 1;
+        background: white;
+        color: black;
+      }
+    }
+  }
+  &__text {
+    position: absolute;
+    width: 100%;
+    bottom: 0.1vw;
+    font-size: 14px;
+    text-align: center;
+  }
+  .slick-slider {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .step-1 {
+    padding-bottom: 40px;
+    &__text {
+      bottom: 6px;
+    }
+    .slick-slider {
+      display: block;
+    }
+    &__slider {
+      .slick-list, .slick-track, .slick-slide, .slick-slide > div {
+        height: 100%;
+        .wrapper-image {
+          text-align: center;
+          height: calc(100% - 40px);
+          img {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &__bottle-name {
+      font-size: 14px;
+      font-family: $font--tertiary;
+      text-align: center;
+      width: 100%;
+      letter-spacing: 1.56px;
+      margin-top: 10px;
+    }
+    .slick-active {
+      .step-1__bottle-name {
+        display: block;
+      }
+      img {
+        -webkit-filter: none;
+      }
+    }
+    &__marquee {
+      position: absolute;
+      overflow: hidden;
+      bottom: 6px;
+      white-space: nowrap;
+      font-size: 14px;
+      margin-left: 10%;
+      margin-right: 10%;
+      width: 80%;
+      &__text {
+        display: inline-block;
+        transform: translatex(0);
+        animation: marquesina 7s infinite normal linear .5s;
+      }
+    }
+  }
+}
+
+@keyframes marquesina {
+  0% {
+    transform: translatex(0);
+  }
+  100% {
+    transform: translatex(-50%);
+  }
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes greetings {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes greetings {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes greetings {
+  0% {
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+}
+

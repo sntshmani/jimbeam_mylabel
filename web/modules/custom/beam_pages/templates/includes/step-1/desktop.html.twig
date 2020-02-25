@@ -1,0 +1,21 @@
+<div class="step-1__wrapper-bottles only-desktop">
+  {% for key, bottle in bottles %}
+    {% set bottle_classes = [
+      'step-1__wrapper-bottle'
+    ] %}
+    <div class="{{ bottle_classes|join(' ')|trim }}"
+         v-bind:class="{active: form.bottle === '{{ key }}'}"
+         @click="clickBottle('{{ key }}', {{ bottle|json_encode() }})"
+    >
+      <div class="wrapper-image">
+        <img src="{{ mr_image_style(bottle.bottle, 'bottle') }}"
+             v-bind:class="{active: form.bottle === '{{ key }}'}"
+        />
+      </div>
+      <a class="link-button" type="button">{{ bottle.title }}</a>
+    </div>
+  {% endfor %}
+</div>
+{% if step_label.step_1_text and enabled > 1 %}
+  <div class="step-1__text only-desktop">{{ step_label.step_1_text }}</div>
+{% endif %}

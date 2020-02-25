@@ -1,0 +1,111 @@
+<?php
+
+use Drupal\beam_misc\Helper\CookieHelper;
+use Drupal\beam_misc\Helper\CountryHelper;
+use Drupal\beam_misc\Helper\DisplayHelper;
+use Drupal\beam_misc\Helper\FormHelper;
+
+function beam_theme_preprocess_region(&$variables) {
+  $region = $variables['region'];
+
+  if (in_array($region, ['header', 'footer'])) {
+    $currentLanguageId = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+    $variables['images_dir'] = DisplayHelper::imagesDir();
+    $variables['sn_facebook'] = \Drupal::state()->get('sn_facebook');
+    $variables['sn_twitter'] = \Drupal::state()->get('sn_twitter');
+    $variables['sn_instagram'] = \Drupal::state()->get('sn_instagram');
+
+    $variables['languages'] = DisplayHelper::getLanguagesCustomer();
+    $variables['current_language_id'] = $currentLanguageId;
+    $variables['current_language_label'] = t(\Drupal::languageManager()->getCurrentLanguage()->getName());
+
+    if ($region == 'header') {
+      $currentCountryCode = CookieHelper::getCustomerCountry();
+      $variables['menu_main'] = $variables['elements']['beam_theme_menu_main'];
+      $variables['menu_main_mobile'] = $variables['elements']['beam_theme_menu_main_mobile'];
+      $variables['link_buy'] = DisplayHelper::linkBuy($variables, $currentLanguageId);
+      $variables['countries'] = CountryHelper::getCountriesProperties();
+      $variables['current_country_label'] = $currentCountryCode ? CountryHelper::getUntranslatedCountryNameByCode($currentCountryCode) : NULL;
+
+      $variables['web_domain'] = CookieHelper::getDomain();
+    }
+    elseif ($region == 'footer') {
+      $variables['menu_footer'] = $variables['elements']['beam_theme_menu_footer'];
+      $variables['menu_footer_bottom'] = $variables['elements']['beam_theme_menu_footer_bottom'];
+      $variables['footer_copyright'] = \Drupal::state()->get('footer_copyright');
+
+      $variables['link_drinksmart'] = \Drupal::state()->get('link_drinksmart');
+    }
+  }
+}
+
+function beam_theme_preprocess_html(&$variables) {
+  $variables['images_dir'] = DisplayHelper::imagesDir();
+  $variables['popup_id'] = DisplayHelper::getBlockId('Popup');
+  $variables['current_language_id'] = strtoupper(\Drupal::languageManager()->getCurrentLanguage()->getId());
+  $variables['countries'] = CountryHelper::getCountriesProperties();
+  $variables['web_version'] = \Drupal::state()->get('web_version');
+
+  $variables['web_domain'] = CookieHelper::getDomain();
+  $variables['link_drinksmart'] = \Drupal::state()->get('link_drinksmart');
+
+  $currentRoute = \Drupal::routeMatch()->getRouteName();
+  $variables['is_user_login'] = $currentRoute == 'user.login' ? 1 : 0;
+}
+
+function beam_theme_preprocess_paragraph(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  switch ($paragraph->getType()) {
+    case 'block_body':
+      $color = $paragraph->field_background_color->value;
+      $variables['class_background'] = 'background--' . $color;
+      break;
+    case 'block_image':
+      $country = CookieHelper::getCustomerCountry();
+      $variables['image_photo'] = $country ? CountryHelper::getEnabledImageLabelByCode($country) : false;
+  }
+}
+
+function beam_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+  if ($element['#entity_type'] == 'node' && $element['#bundle'] == 'page' && $element['#field_name'] == 'field_blocks') {
+    $node = $element['#object'];
+    $blockId = $node->field_blocks->first()->target_id;
+    $display = DisplayHelper::getDisplayBlock($blockId);
+    $suggestions[] = join('__', ['field', $element['#entity_type'], $element['#field_name'], $display]);
+  }
+}
+
+function beam_theme_theme_suggestions_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']) && isset($variables['element']['#type']) && $variables['element']['#type'] == 'form') {
+    $original_theme_hook = $variables['theme_hook_original'];
+    $id = $variables['element']['#form_id'];
+    if (in_array($id, FormHelper::getCustomTemplates())) {
+      $suggestions[] = $original_theme_hook . '__' . str_replace('-', '_', $id);
+    }
+  }
+}
+
+function beam_theme_preprocess_menu(&$variables) {
+  if (isset($variables['menu_name'])) {
+    if ($variables['menu_name'] === 'main') {
+      foreach($variables['items'] as $key => $item) {
+        $url = $item['url'];
+        if (!$url->isExternal()) {
+          $routeName = $url->getRouteName();
+          $routeParameters = $url->getRouteParameters();
+          if ($routeName == 'entity.node.canonical' && (isset($routeParameters['node']) && $routeParameters['node'] == 1)) {
+            $variables['items'][$key]['is_active'] = TRUE;
+          }
+        }
+        elseif ($item['title'] == 'Swag') {
+          $variables['items'][$key]['is_blank'] = TRUE;
+        }
+      }
+    }
+    elseif ($variables['menu_name'] == 'main-mobile') {
+      $variables['countries'] = CountryHelper::getCountriesProperties();
+    }
+  }
+}

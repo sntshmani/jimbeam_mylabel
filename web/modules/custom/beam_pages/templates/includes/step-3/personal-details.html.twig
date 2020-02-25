@@ -1,0 +1,107 @@
+<div class="step-3__dropdown" v-bind:class="{disabled: !step3CouponValid}" id="step-3__dropdown-personal-details">
+  {% if step_label.step_3_personal_title %}
+    <div class="step-3__dropdown__title">{{ step_label.step_3_personal_title }}</div>
+  {% endif %}
+  <div class="accordion-panel">
+
+
+    <div class="step-3__wrapper-inputs">
+      <div class="wrapper-input" v-bind:class="{ 'form-group--error': $v.form.name.$error }">
+        <label for="name">{{ 'First Name'|t }}</label>
+        <input type="text" name="name" placeholder="{{ 'Write your name'|t }}" v-model="$v.form.name.$model"/>
+        <div class="input-error input-error-msg">
+          {{ 'Required field'|t }}
+        </div>
+      </div>
+      <div class="wrapper-input" v-bind:class="{ 'form-group--error': $v.form.surname.$error }">
+        <label for="surname">{{ 'Surname'|t }}</label>
+        <input type="text" name="surname" placeholder="{{ 'Write your surname'|t }}" v-model="$v.form.surname.$model"/>
+        <div class="input-error input-error-msg">
+          {{ 'Required field'|t }}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="step-3__wrapper-inputs">
+      {% include '@beam_pages/includes/step-3/email.html.twig' %}
+      <div class="wrapper-input">
+        <label for="phone">{{ 'Phone number'|t }}</label>
+        <div class="step-3__wrapper-inputs step-3__wrapper-inputs--no-border">
+          <div class="wrapper-input">
+            <phone-select default-value="{{ default_phone_code }}"
+                          select-options="{{ phone_codes|json_encode() }}"
+                          :handle-change="(v) => {form.phone_code = v}"/>
+          </div>
+          <div class="wrapper-input"  v-bind:class="{ 'form-group--error': $v.form.phone.$error }">
+            <input type="text" name="phone" placeholder="{{ '12 3 456 0000'|t }}" v-model="$v.form.phone.$model"/>
+            <div class="input-error input-error-msg">
+              {{ 'Required field'|t }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="step-3__wrapper-inputs">
+      <div class="wrapper-input" v-bind:class="{ 'form-group--error': $v.form.address1.$error }">
+        <label for="address1">{{ 'Address Line 1'|t }}</label>
+        <input type="text" name="address1" placeholder="{{ 'Write here'|t }}"v-model="$v.form.address1.$model"/>
+        <div class="input-error input-error-msg">
+          {{ 'Required field'|t }}
+        </div>
+      </div>
+    </div>
+    <div class="step-3__wrapper-inputs">
+      <div class="wrapper-input">
+        <label for="address2">{{ 'Address Line 2 (Optional)'|t }}</label>
+        <input type="text" name="address2" placeholder="{{ 'Write here'|t }}" v-model="form.address2"/>
+      </div>
+    </div>
+    <div class="step-3__wrapper-inputs">
+      <div class="wrapper-input">
+        <label for="address3">{{ 'Address Line 3 (Optional)'|t }}</label>
+        <input type="text" name="address3" placeholder="{{ 'Write here'|t }}" v-model="form.address3"/>
+      </div>
+    </div>
+    <div class="step-3__wrapper-inputs">
+      <div class="wrapper-input" v-bind:class="{ 'form-group--error': $v.form.city.$error }">
+        <label for="city">{{ 'Town/City'|t }}</label>
+        <input type="text" name="city" placeholder="{{ 'Write your city or town'|t }}" v-model="$v.form.city.$model"/>
+        <div class="input-error input-error-msg">
+          {{ 'Required field'|t }}
+        </div>
+      </div>
+      <div class="wrapper-input" v-bind:class="{ 'form-group--error': $v.form.postal_code.$error }">
+        <label for="postal_code">{{ 'Postal code'|t }}</label>
+        <input type="text" name="postal_code" placeholder="{{ 'Write your postal code'|t }}" v-model="$v.form.postal_code.$model"/>
+        <div class="input-error input-error-msg">
+          {{ 'Required field'|t }}
+        </div>
+      </div>
+      <div class="wrapper-input">
+        <label for="country">{{ 'Country'|t }}</label>
+        <input type="text" name="country" class="disabled-input" value="{{ country_name }}" disabled/>
+      </div>
+    </div>
+
+    {% if step_label.step_3_personal_text %}
+      <div class="step-3__personal-text">{{ step_label.step_3_personal_text }}</div>
+    {% endif %}
+
+    <div v-bind:class="{ 'form-group--error': showMsgTermsPrivacy }">
+      <div class="step-3__wrapper-checkbox">
+        <input type="checkbox" name="terms" v-model="$v.form.terms.$model" @change="clickTermsPrivacy()"/>
+        <label>{{ 'I agree to the %link_terms% Terms and Conditions.%link_end%' | trans | replace ({'%link_terms%' : '<a href="' ~ link_terms|t ~ '" class="red-link" target="_blank">', '%link_end%' : '</a>'}) | raw }}</label>
+      </div>
+      <div class="step-3__wrapper-checkbox">
+        <input type="checkbox" name="privacy_policy"
+               v-model="$v.form.privacy_policy.$model" @change="clickTermsPrivacy()"/>
+        <label>{{ 'I agree to the collection and processing of my personal data in line with the %link_privacy% Privacy Policy.%link_end%' | trans | replace ({'%link_privacy%' : '<a href="' ~ link_privacy|t ~ '" class="red-link" target="_blank">', '%link_end%' : '</a>'}) | raw }}</label>
+      </div>
+      <div class="input-error input-error-msg">
+        {{ 'Accept the Terms and Conditions and the Privacy Policy in order to continue'|t }}
+      </div>
+    </div>
+  </div>
+</div>

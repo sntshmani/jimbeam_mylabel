@@ -1,0 +1,13 @@
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% set ul_class = menu_level == 0 ? 'menu-list--first-level' : 'menu-list--submenu' %}
+    {% set directive = menu_level == 0 ? 'v-menuhover' : '' %}
+    <ul class="{{ ul_class }}" {{directive}}>
+        {% include directory ~ '/themes/custom/beam_theme/templates/menus/common/menu-item.html.twig' %}
+    </ul>
+  {% endif %}
+{% endmacro %}

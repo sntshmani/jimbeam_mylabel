@@ -1,0 +1,42 @@
+@import './variables.scss';
+
+body {
+  margin-top: 97px;
+  font-family: $font;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+b {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+}
+
+input, textarea, button, a {
+  outline: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.only-mobile {
+  display: none;
+}
+
+@media (max-width: $mobile) {
+  body {
+    font-size: 14px;
+    margin-top: 68px;
+  }
+  .only-mobile {
+    display: block;
+  }
+  .only-desktop {
+    display: none !important;
+  }
+}

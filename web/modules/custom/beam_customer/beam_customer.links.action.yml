@@ -1,0 +1,5 @@
+beam_customer.export:
+  route_name: beam_customer.export
+  title: 'Export customers'
+  appears_on:
+    - entity.beam_customer.collection

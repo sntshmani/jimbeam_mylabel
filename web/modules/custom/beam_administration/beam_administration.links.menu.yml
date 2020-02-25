@@ -1,0 +1,36 @@
+beam_administration.vars:
+  title: 'Variables'
+  route_name: beam_administration.vars
+  menu_name: toolbar
+  weight: 0
+
+beam_administration.social_network:
+  title: 'Social Networks'
+  route_name: beam_administration.social_network
+  menu_name: toolbar
+  weight: 1
+
+beam_administration.bottles:
+  title: 'Bottles'
+  route_name: beam_administration.bottles
+  menu_name: toolbar
+  weight: 2
+
+beam_administration.coupon_generator:
+  title: 'Code Generator'
+  route_name: beam_administration.coupon_generator
+  menu_name: toolbar
+  weight: 3
+
+beam_administration.import_codes:
+  title: 'Import Codes'
+  route_name: beam_administration.import_codes
+  menu_name: toolbar
+  parent: beam_administration.coupon_generator
+  weight: 0
+
+beam_administration.step_label:
+  title: 'Step Label'
+  route_name: beam_administration.step_label
+  menu_name: toolbar
+  weight: 4

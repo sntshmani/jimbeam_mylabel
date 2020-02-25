@@ -1,0 +1,71 @@
+@import '../common/variables';
+
+.block-popup {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 6, 34, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.active {
+    transition: 0.5s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+  }
+  &__close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background: url("../assets/icons/close.png") center no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  &__image {
+    margin-bottom: 50px;
+  }
+  &__body {
+    padding: 61px 92px;
+    background: white;
+    width: 700px;
+    height: 650px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &__title {
+      font-family: $font--tertiary;
+      font-size: 26px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+    &__body {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .block-popup {
+    &__body {
+      width: 100vw;
+      height: 100vh;
+      padding: 40px 20px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

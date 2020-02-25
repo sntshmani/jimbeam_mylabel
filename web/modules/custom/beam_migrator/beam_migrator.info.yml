@@ -1,0 +1,8 @@
+name: 'Beam Migrator'
+type: module
+description: 'Beam migration module'
+core: 8.x
+package: 'Beam'
+
+dependencies:
+  - beam_code:beam_code

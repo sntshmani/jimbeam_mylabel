@@ -1,0 +1,73 @@
+<?php
+
+use Drupal\beam_misc\Helper\EntityHelper;
+use Drupal\beam_misc\Helper\OrderHelper;
+
+/**
+ * Install field: Default language
+ */
+function beam_country_update_8001() {
+  $defaultLanguage = EntityHelper::createFieldList('Default Language', TRUE, OrderHelper::getLanguages(), FALSE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('default_language', 'beam_country', 'beam_country', $defaultLanguage);
+}
+
+/**
+ * Install field: Black list and Options Subhead
+ */
+function beam_country_update_8002() {
+  $prohibited = EntityHelper::createFieldTextarea('Black list', 'Separated by commas (,)', FALSE);
+  $options = EntityHelper::createFieldTextarea('Personalized text from the dropdown list', 'key | value', TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('prohibited', 'beam_country', 'beam_country', $prohibited);
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('options', 'beam_country', 'beam_country', $options);
+}
+
+/**
+ * Install field: Enabled country
+ */
+function beam_country_update_8003() {
+  $enabled = EntityHelper::createFieldBoolean(t('Enabled country'));
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('enabled', 'beam_country', 'beam_country', $enabled);
+}
+
+/**
+ * Install fields: bottles
+ */
+function beam_country_update_8004() {
+  $bottles = OrderHelper::getBottles();
+  foreach ($bottles as $key => $label) {
+    $field = EntityHelper::createFieldBoolean($label);
+    \Drupal::entityDefinitionUpdateManager()
+      ->installFieldStorageDefinition($key, 'beam_country', 'beam_country', $field);
+  }
+  $fieldLabel = EntityHelper::createFieldBoolean(t('Enable picture in step 2'));
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('label_image', 'beam_country', 'beam_country', $fieldLabel);
+}
+
+/**
+ * Install fields: Country url
+ */
+function beam_country_update_8005() {
+  $countryUrl = EntityHelper::createFieldTextfield('Country URL', TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('country_url', 'beam_country', 'beam_country', $countryUrl);
+}
+
+/**
+ * Uninstall unused fields: country_url
+ */
+function beam_country_update_8006() {
+  $definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+  if ($fieldUid = $definition_update_manager->getFieldStorageDefinition('country_url', 'beam_country')) {
+    $definition_update_manager->uninstallFieldStorageDefinition($fieldUid);
+  }
+}

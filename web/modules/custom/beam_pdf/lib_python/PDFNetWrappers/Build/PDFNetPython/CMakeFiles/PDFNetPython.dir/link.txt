@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fPIC  -fPIC -Wl,-rpath,'$ORIGIN' -shared  -o ../lib/_PDFNetPython.so CMakeFiles/PDFNetPython.dir/PDFNetPython.cpp.o -Wl,-rpath,/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/PDFNetC/Lib: ../../PDFNetC/Lib/libPDFNetC.so 

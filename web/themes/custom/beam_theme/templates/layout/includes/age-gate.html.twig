@@ -1,0 +1,49 @@
+<div class="age-gate block-general" >
+  <age-gate inline-template
+            web-domain="{{ web_domain }}"
+  >
+    <div class="block-container column">
+      <div class="age-gate__logo"><img src="/{{ images_dir }}/logo.png" alt="bowmore logo"/></div>
+      <div class="age-gate__title">{{ 'WELCOME, FRIEND'|t }}</div>
+      <div class="age-gate__subtitle">{{ '(OF LEGAL DRINKING AGE).'|t }}</div>
+      <div class="age-gate__text">{{ 'PLEASE ENTER YOUR BIRTHDATE.'|t }}</div>
+
+      <div class="age-gate__inputs">
+        <div class="input-wrapper">
+          <input type="text" pattern="\d*" maxlength="2" inputmode="numeric" placeholder="MM" name="month" v-model="form.month" @input="onChangeInputHandler" v-bind:class="{with_error: monthTouched && !form.month, active: form.month}"/>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" pattern="\d*" maxlength="2" inputmode="numeric" placeholder="DD" name="day" v-model="form.day" @input="onChangeInputHandler" v-bind:class="{with_error: dayTouched && !form.day, active: form.day}"/>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" pattern="\d*" maxlength="4" inputmode="numeric" placeholder="YYYY" name="year" v-model="form.year" @input="onChangeInputHandler" v-bind:class="{with_error: yearTouched && !form.year, active: form.year}"/>
+        </div>
+      </div>
+
+      <div class="age-gate__checkbox">
+        <div class="checkbox">
+          <input type="checkbox" class="checkbox__input" id="remember" name="remember" v-model="form.remember"/>
+          <label class="checkbox__label" for="remember">{{ 'Remember'|t }}</label>
+        </div>
+      </div>
+
+      <div class="age-gate__buttons">
+        <button class="button" type="button"
+                @click="submit"
+                ref="myButton" lang="{{ current_language_id }}" v-bind:class="{enabled: checkSubmitEnabled()}">{{ 'ENTER SITE'|t }}</button>
+      </div>
+
+      {% include '@beam_theme/layout/includes/country-switcher.html.twig' %}
+
+      <div
+        class="age-gate__terms">{{ 'By entering, you agree to our Terms and Conditions and Privacy Policy.'|t }}</div>
+
+      <div class="drink-logo">
+        {% if link_drinksmart %}
+          <a href="{{ link_drinksmart|t }}" target="_blank"><img src="/{{ images_dir }}/drink-smart.svg" alt=""></a>
+        {% endif %}
+      </div>
+    </div>
+  </age-gate>
+</div>
+

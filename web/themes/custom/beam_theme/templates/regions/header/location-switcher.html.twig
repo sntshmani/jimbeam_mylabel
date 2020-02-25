@@ -1,0 +1,15 @@
+<div class="top-search-flag text-right">
+  <div class="top-language-flag">
+    <div class="language-flag">
+      <div class="dropdown" v-locationopen>
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+          {% set classes = ['active-language',
+            additional_classes ? additional_classes : ''
+          ] %}
+          <i class="fa fa-globe fa-lg"></i><span class="{{classes|join(' ')|trim}}">{{ current_country_label }}</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

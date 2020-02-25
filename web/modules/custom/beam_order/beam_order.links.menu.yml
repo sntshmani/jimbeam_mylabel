@@ -1,0 +1,5 @@
+beam_order.view:
+  title: 'Labels'
+  route_name: beam_order.view
+  menu_name: results
+  weight: 3

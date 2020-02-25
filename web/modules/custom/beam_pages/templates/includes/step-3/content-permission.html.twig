@@ -1,0 +1,44 @@
+<div class="step-3__dropdown" v-bind:class="{disabled: !step3PersonalValidation()}" id="step-3__dropdown-content-permission">
+  {% if step_label.step_3_permission_title %}
+    <div class="step-3__dropdown__title">{{ step_label.step_3_permission_title }}</div>
+  {% endif %}
+  <div class="accordion-panel">
+    {% if step_label.step_3_permission_text %}
+      {{ step_label.step_3_permission_text }}
+    {% endif %}
+    <div class="step-3__content-permission__first-radios" v-bind:class="{ 'form-group--error': showMsgOffersJimbeam }">
+      <div class="step-3__wrapper-radio">
+          <input type="radio" name="offers_jimbeam" value="1" v-model="$v.form.offers_jimbeam.$model" @change="clickOffersJimbeam"/>
+        <label>
+          {{ 'Yes please, I’d like to hear about offers and marketing promotions from Jim Beam.'|t }}
+        </label>
+      </div>
+      <div class="step-3__wrapper-radio">
+          <input type="radio" name="offers_jimbeam" value="0" v-model="$v.form.offers_jimbeam.$model" @change="clickOffersJimbeam"/>
+        <label>
+          {{ 'No thanks, I don’t want to hear about offers and marketing promotions from Jim Beam.'|t }}
+        </label>
+      </div>
+      <div class="input-error input-error-msg">
+        {{ 'Choose one of these options'|t }}
+      </div>
+    </div>
+    <div v-bind:class="{ 'form-group--error': showMsgOffersBeamsuntory }">
+      <div class="step-3__wrapper-radio">
+        <input type="radio" name="offers_beamsuntory" value="1" v-model="$v.form.offers_beamsuntory.$model" @change="clickOffersBeamsuntory"/>
+        <label>
+          {{ 'Yes please, I’d like to hear about offers and marketing promotions from other Beam Suntory brands.'|t }}
+        </label>
+      </div>
+      <div class="step-3__wrapper-radio">
+        <input type="radio" name="offers_beamsuntory" value="0" v-model="$v.form.offers_beamsuntory.$model" @change="clickOffersBeamsuntory"/>
+        <label>
+          {{ 'No thanks, I don’t want to hear about offers and marketing promotions from other Beam Suntory brands.'|t }}
+        </label>
+      </div>
+      <div class="input-error input-error-msg">
+        {{ 'Choose one of these options'|t }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+add code entities:
+  title: 'Create new Code entities'
+
+administer code entities:
+  title: 'Administer Code entities'
+  description: 'Allow to access the administration form to configure Code entities.'
+  restrict access: true
+
+delete code entities:
+  title: 'Delete Code entities'
+
+edit code entities:
+  title: 'Edit Code entities'
+
+view code entities:
+  title: 'View Code entities'
+
+export code list:
+  title: 'Export Code list'
+
+generate codes:
+  title: 'Generate codes for country'

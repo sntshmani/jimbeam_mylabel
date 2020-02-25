@@ -1,0 +1,15 @@
+{% for key, item in items %}
+  {% if not loop.last %}
+      {% if loop.first %}
+        <div class="Container-top">
+          <div class="Col-left">{{ item.content }}</div>
+      {% else %}
+          <div class="Col-right">{{ item.content }}</div>
+        </div>
+      {% endif %}
+  {% else %}
+    <div class="Container-bottom">
+      {{ item.content }}
+    </div>
+  {% endif %}
+{% endfor %}

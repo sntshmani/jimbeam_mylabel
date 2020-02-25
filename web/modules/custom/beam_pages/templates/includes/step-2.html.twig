@@ -1,0 +1,27 @@
+<div class="step-2__wrapper_container_image">
+  <div class="step-2__wrapper_image" v-bind:class="{completed: checkStep2Completed()}">
+    <img :src="vars.image_label_url" class="step-2__label-image">
+    {% include '@beam_pages/includes/step-2/image-values.html.twig' %}
+  </div>
+  {% if show_picture_label %}
+    <div class="step-2__wrapper-info info-desktop" v-if="!isMobile">
+      <i class="fa fa-info-circle" v-info></i>
+      <div class="info-block">
+        {{ step_label.step_2_info }}
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+{% if show_picture_label %}
+  <div class="step-2__wrapper-info info-mobile">
+    <i class="fa fa-info-circle"></i>
+    <span class="info-text">{{ step_label.step_2_info }}</span>
+  </div>
+{% endif %}
+
+{% set legal_text = show_picture_label ? step_label.step_2_legal : step_label.step_2_legal_without_picture %}
+<div class="step-2__wrapper_checkbox">
+  <input type="checkbox" v-model="form.step2_legal"/>
+  <label>{{ legal_text }}</label>
+</div>

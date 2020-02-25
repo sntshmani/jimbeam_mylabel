@@ -1,0 +1,171 @@
+@import '../../common/variables.scss';
+@import 'step-1';
+@import 'step-2';
+@import 'step-3';
+@import 'google-autocomplete';
+
+.Custom-bottle {
+  position: relative;
+  &__header {
+    font-family: $font--tertiary;
+    background: black;
+    color: white;
+    height: 80px;
+    width: 100%;
+    padding: 0 100px;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    letter-spacing: 4.33px;
+  }
+  &__step-label {
+    margin-right: 40px;
+    color: $grey-dark;
+    letter-spacing: 2.15px;
+    &.active {
+      color: $red;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__footer {
+    height: 85px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 120px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 12px 0 rgba(0, 0, 0, 0.04);
+    background-color: white;
+    .button {
+      cursor: pointer;
+      color: white;
+      background: $red;
+      border: none;
+      height: 35px;
+      font-family: $font--tertiary;
+      font-size: 15px;
+      letter-spacing: 1.13px;
+      text-transform: uppercase;
+      padding: 0 15px;
+      margin: 0 15px;
+      &:hover {
+        background: $red-light;
+      }
+      &.disabled {
+        background: $grey-disabled;
+      }
+    }
+    &__text {
+      font-weight: 600;
+      padding-left: 30px;
+      box-sizing: border-box;
+      font-size: 14px;
+      background: url("../assets/icons/mail.png") left bottom no-repeat;
+      .red {
+        color: $red;
+        font-weight: 500;
+      }
+    }
+  }
+  &--step-3 {
+    height: auto;
+    .Custom-bottle__content {
+      height: auto;
+      max-height: none;
+    }
+    .Custom-bottle__footer {
+      position: initial;
+    }
+  }
+  &--step-1 {
+    .Custom-bottle__content {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .Custom-bottle {
+    &__header {
+      padding: 15px;
+      height: 95px;
+      box-sizing: border-box;
+      flex-direction: column-reverse;
+      .wrapper-steps:before,
+      .active:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        background-color: $red;
+        width: 100%;
+        z-index: -1;
+      }
+      .active:after {
+        background-color: $grey-background;
+      }
+      .wrapper-steps {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 2;
+      }
+    }
+    &__step-label {
+      padding: 0;
+      font-family: $font--secondary;
+      display: inline-block;
+      margin-right: 0;
+      color: black;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      background-color: $grey-background;
+      &.active, &.completed {
+        color: black;
+        border: 1px solid $red;
+        background-color: $red;
+      }
+    }
+    &__title {
+      font-size: 12px;
+    }
+    &__step-label {
+      font-size: 15px;
+      padding-left: 2px;
+      padding-top: 1px;
+      box-sizing: border-box;
+    }
+    &__content {
+      height: auto;
+      max-height: none;
+      padding: 10px 0;
+      box-sizing: border-box;
+    }
+    &__footer {
+      padding: 0 15px;
+      &__text {
+        display: none;
+      }
+    }
+    &--step-1 {
+      .Custom-bottle__content {
+        height: calc(100vh - 249px);
+      }
+    }
+    &--step-3 {
+      height: auto;
+    }
+  }
+}

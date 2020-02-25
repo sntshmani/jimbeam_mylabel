@@ -1,0 +1,17 @@
+entity.beam_code.add_form:
+  route_name: entity.beam_code.add_form
+  title: 'Add Code'
+  appears_on:
+    - entity.beam_code.collection
+
+beam_code.generator:
+  route_name: beam_code.generator
+  title: 'Generate codes'
+  appears_on:
+    - entity.beam_code.collection
+    -
+beam_code.export:
+  route_name: beam_code.export
+  title: 'Export codes'
+  appears_on:
+    - entity.beam_code.collection

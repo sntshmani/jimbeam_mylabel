@@ -1,0 +1,26 @@
+{%
+  set classes = [
+  'block',
+  'block--' ~ plugin_id|clean_class, 'block-content',
+  'block-popup'
+]
+%}
+<div{{ attributes.addClass(classes) }} v-popup>
+  <div class='block-popup__body' v-on:click.stop="">
+    <div v-popup class='block-popup__close'></div>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    {% if not block.field_image.isEmpty() %}
+      {{ content.field_image }}
+    {% endif %}
+    {% if not block.field_title.isEmpty() %}
+    <div class='block-popup__body__title'>{{ content.field_title }}</div>
+    {% endif %}
+    {% if not block.field_body.isEmpty() %}
+    <div class='block-popup__body__body'>{{ content.field_body }}</div>
+    {% endif %}
+    {% if not block.field_label.isEmpty() %}
+      {{ content.field_label }}
+    {% endif %}
+  </div>
+</div>

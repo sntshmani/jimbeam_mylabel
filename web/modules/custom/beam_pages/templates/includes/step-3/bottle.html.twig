@@ -1,0 +1,16 @@
+<div class="step-3__wrapper-images">
+  <div class="step-3__wrapper-images__image">
+    <img src="{{ fixed_images.bottle_step3_front }}"/>
+    <div class="step-3__wrapper-images__image__label">${form.image_label}$</div>
+    <div class="step-3__wrapper-images__image__subhead">${vars.image_subhead_step3}$</div>
+  </div>
+  <div class="step-3__wrapper-images__image">
+    <img :src="image_bottle_lateral_url" alt="">
+    {% if show_picture_label %}
+      <div class="step-3__wrapper-images__image__picture"><img :src="image_picture_url" alt=""></div>
+    {% endif %}
+  </div>
+</div>
+<div class="step-3__bottle-text">
+  <span>${ bottleProperties.title }$</span>
+</div>

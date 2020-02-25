@@ -1,0 +1,16 @@
+<div class="search-box" style="display: none;">
+  <div class="search-stamp"><img src="/{{ images_dir }}/jim-beam-stamp.jpg" alt="JimBeam Stamp"></div>
+  <div class="search-form-dv">
+    <button type="submit" class="search-ico-on"><i class="fas fa-search"></i></button>
+    <form action="/es-es/search/jb" method="get" id="search-block-form" accept-charset="UTF-8">
+      <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+        <label for="edit-keys" class="visually-hidden">{{ 'Search' }}</label>
+        <input title="Enter the terms you wish to search for." placeholder="SEARCH..." data-drupal-selector="edit-keys" class="form-autocomplete form-search ui-autocomplete-input" data-key="search_block" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" autocomplete="off">
+
+      </div>
+      <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit">
+
+    </form>
+    <div class="close-search-ico"><i class="fas fa-times"></i></div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+beam_country.own_country:
+  path: '/country/me/edit'
+  defaults:
+    _controller: '\Drupal\beam_country\Controller\CountryController::edit'
+    _title: 'Country administration'
+  requirements:
+    _permission: 'edit own country entities'
+  options:
+    _admin_route: TRUE

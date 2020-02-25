@@ -1,0 +1,26 @@
+services:
+  class.beam_migrator_content:
+    class: Drupal\beam_migrator\Command\ContentCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+  class.beam_migrator_menu:
+    class: Drupal\beam_migrator\Command\MenuCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+  class.beam_migrator_clean:
+    class: Drupal\beam_migrator\Command\CleanCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+  class.beam_migrator_codes:
+    class: Drupal\beam_migrator\Command\BeamCodeCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+  class.beam_migrator_load:
+    class: Drupal\beam_migrator\Command\EntityLoadCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }

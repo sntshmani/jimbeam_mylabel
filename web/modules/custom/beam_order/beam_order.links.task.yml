@@ -1,0 +1,5 @@
+entity.beam_order.delete_form:
+  route_name:  entity.beam_order.delete_form
+  base_route:  entity.beam_order.canonical
+  title: Delete
+  weight: 10

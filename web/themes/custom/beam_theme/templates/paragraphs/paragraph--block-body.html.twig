@@ -1,0 +1,26 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'block-body', class_background
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if not paragraph.field_title.isEmpty() %}
+      <div class="block-body__title">{{ content.field_title }}</div>
+    {% endif %}
+    {% if not paragraph.field_subtitle.isEmpty() %}
+      <div class="block-body__subtitle">{{ content.field_subtitle }}</div>
+    {% endif %}
+    {% if not paragraph.field_body.isEmpty() %}
+      <div class="block-body__body">{{ content.field_body }}</div>
+    {% endif %}
+    {% if not paragraph.field_link_button.isEmpty() %}
+      {{ content.field_link_button }}
+    {% endif %}
+    {% if not paragraph.field_link.isEmpty() %}
+      {{ content.field_link }}
+    {% endif %}
+  </div>
+{% endblock paragraph %}

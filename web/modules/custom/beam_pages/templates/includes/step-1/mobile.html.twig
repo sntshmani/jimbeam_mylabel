@@ -1,0 +1,29 @@
+<div class="step-1__wrapper-bottles only-mobile step-1__slider"
+     {% if bottles|length > 1 %}
+       v-slider
+     {% endif %}
+     v-if="isMobile">
+  {% for key, bottle in bottles %}
+    {% set bottle_classes = [
+      'step-1__wrapper-bottle'
+    ] %}
+    <div class="{{ bottle_classes|join(' ')|trim }}"
+         v-bind:class="{active: form.bottle === '{{ key }}'}"
+         @click="clickBottle('{{ key }}', {{ bottle|json_encode() }})"
+    >
+      <div class="wrapper-image">
+        <img src="{{ mr_image_style(bottle.bottle, 'bottle') }}"
+            v-bind:class="{active: form.bottle === '{{ key }}'}"
+        />
+      </div>
+      <div class="step-1__bottle-name">{{ bottle.title }}</div>
+    </div>
+  {% endfor %}
+</div>
+{% if step_label.step_1_text and enabled > 1 %}
+  <div class="step-1__marquee only-mobile">
+    <span class="step-1__marquee__text">{{ step_label.step_1_text }}
+      <span>&nbsp;&nbsp;&nbsp;{{ step_label.step_1_text }}</span>
+    </span>
+  </div>
+{% endif %}

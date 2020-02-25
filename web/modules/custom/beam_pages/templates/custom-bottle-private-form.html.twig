@@ -1,0 +1,15 @@
+<bottle-private-form inline-template
+             url="{{ path('beam_order.order_form') }}"
+             draw-url="{{ path('beam_order.draw_form') }}"
+             file-url="{{ path('beam_order.file_form') }}"
+             label-url="{{ path('beam_order.image_label') }}"
+             prohibited-url="{{ path('beam_order.prohibited_form') }}"
+             show-picture-label="{{ show_picture_label }}"
+             error-msg-step1="{{ step_label.step_1_error }}"
+             error-msg-step2="{{ step_label.step_2_error }}"
+             error-msg-prohibited="{{ step_label.step_2_prohibited }}"
+             fixed-images="{{ fixed_images|json_encode() }}"
+>
+  {% set is_private = true %}
+  {% include '@beam_pages/includes/form.html.twig' %}
+</bottle-private-form>

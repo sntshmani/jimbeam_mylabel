@@ -1,0 +1,14 @@
+<input type="text" class="step-2__name" name="image_label" placeholder="{{ 'Write here'|t }}" required
+       v-model="form.image_label" required maxlength="13"/>
+<div class="step-2__wrapper-select">
+  <custom-select default-value="{{ 'Choose a subhead'|t }}" select-options="{{ subhead_options|json_encode }}"
+                 :handle-change="(v) => {form.image_subhead = v}"
+  />
+</div>
+{% if show_picture_label %}
+  <div class="step-2__wrapper-file">
+    <custom-file placeholder="{{ 'Select picture'|t }}"
+                 error-msg-file="{{ step_label.step_2_file }}"
+                 :handle-change="(v) => {form.image_picture = v}"/>
+  </div>
+{% endif %}

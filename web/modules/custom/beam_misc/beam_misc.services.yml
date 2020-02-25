@@ -1,0 +1,10 @@
+services:
+  beam_misc.event_subscriber:
+    class: Drupal\beam_misc\EventSubscriber\MiscSubscriber
+    tags:
+      - { name: event_subscriber }
+  http_middleware.page_cache:
+    class: Drupal\beam_misc\StackMiddleware\CookieCustomerCountry
+    arguments: ['@cache.page', '@page_cache_request_policy', '@page_cache_response_policy']
+    tags:
+      - { name: http_middleware, priority: 300, responder: true }

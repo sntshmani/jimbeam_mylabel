@@ -1,0 +1,4 @@
+extra:
+  css:
+    theme:
+      css/extra.css: {}

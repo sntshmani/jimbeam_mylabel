@@ -1,0 +1,58 @@
+web_version: 1.17.2
+web_domain: mybeamlabel.dev.mrmilu.com
+link_drinksmart: 'https://www.drinksmart.com'
+link_terms: /node/3
+link_privacy: 'https://www.jimbeam.com/privacy'
+contact_mail: info@mybeamlabel.com
+footer_copyright: "<p>© 2019 Beam Suntory Inc. Chicago, IL Jim Beam Brands Co. Merchandise Mart, 222 W. Merchandise Mart Plaza<br />\r\nSuite 1600, Chicago, IL 60654 All trademarks are property of their respective owners.</p>\r\n"
+link_buy: 'https://www.jimbeam.com/buy'
+show_link_buy:
+  en: en
+  de: de
+  fr: fr
+  es: 0
+  lv: 0
+  hu: 0
+  uk: 0
+  ro: 0
+  cs: 0
+  sk: 0
+  bg: 0
+countries_cyrillic:
+  BG: BG
+  UA: UA
+  CH: 0
+  CZ: 0
+  DE: 0
+  DK: 0
+  ES: 0
+  FI: 0
+  GB: 0
+  HU: 0
+  LV: 0
+  'NO': 0
+  RO: 0
+  SE: 0
+  SK: 0
+sn_facebook: 'https://www.facebook.com/JimBeamUS'
+sn_twitter: 'https://twitter.com/jimbeam'
+sn_instagram: 'https://www.instagram.com/jimbeamofficial/'
+step_1_title: 'Choose bottle size'
+step_1_text: 'Please select a bottle size relevant to the bottle you would like to get a label for, i.e. the Jim Beam bottle you have purchased'
+step_1_error: 'Select bottle'
+step_2_title: 'Custom Your Label'
+step_2_legal: 'By clicking the checkbox, I declare my consent to the processing of my personal data as described in the declaration of consent; my consent relates in particular to my biometric data and their storage in connection with the campaign in which I wish to participate.'
+step_2_legal_without_picture: 'By clicking on the checkbox I declare my consent to the processing of my personal data as described in the declaration of consent; my consent relates in particular to my data and its storage in connection with the Promotion which I would like to participate.'
+step_2_error: 'Fill the fields'
+step_2_file: 'File too big. Max filesize 1MB'
+step_2_prohibited: 'Prohibited word'
+step_2_info: 'Image to be uploaded should have light background and good contrast for best results'
+step_3_title: 'Details & Confirmation'
+step_3_code_title: 'Unique Code'
+step_3_code_text: "<p>In order to enjoy this promotion, please enter the promotional code above.</p>\r\n"
+step_3_code_unique: 'Where can I find a unique code?'
+step_3_personal_title: 'Personal Details'
+step_3_personal_text: "<p><b>Note:</b> please enter your correct postal address (as per official documents) so that your very own label gets delivered to the right place.</p>\r\n"
+step_3_permission_title: 'Content Permission'
+step_3_permission_text: "<p>We’d love to send you special offers, product and event promotions, and the latest info from Jim Beam and our Beam Suntory group of brands by email and other electronic means. We’ll always treat your personal details with the utmost care and will never sell them to other companies for marketing purposes. You can always unsubscribe at a later time.</p>\r\n"
+step_help: "<p>Need help? Contact with <a class=\"red\" href=\"mailto:info@mybeamlabel.com\">My Label support</a></p>\r\n"

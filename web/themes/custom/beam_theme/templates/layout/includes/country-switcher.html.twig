@@ -1,0 +1,15 @@
+<div class="language-flag country-flag">
+  <div class="dropdown" v-langselector>
+    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+      <i class="fa fa-globe fa-lg"></i>${ countryLabel }$
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="dropdown-menu">
+      {% for country in countries %}
+          <span @click="clickCountry('{{ country.code }}', '{{ country.name }}', '{{ mr_path_lang('<current>', {}, {},  country.default_language ) }}')" class="country-option">
+            {{ country.name }}
+          </span>
+      {% endfor %}
+    </div>
+  </div>
+</div>

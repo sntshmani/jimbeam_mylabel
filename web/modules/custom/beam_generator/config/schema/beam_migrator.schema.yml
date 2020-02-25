@@ -1,0 +1,7 @@
+action.configuration.generate_label:
+  type: action_configuration_default
+  label: 'Generate label for bottle'
+
+action.configuration.download:
+  type: action_configuration_default
+  label: 'Download pdf with labels'

@@ -1,0 +1,5 @@
+services:
+  beam_order.route_subscriber:
+    class: Drupal\beam_order\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

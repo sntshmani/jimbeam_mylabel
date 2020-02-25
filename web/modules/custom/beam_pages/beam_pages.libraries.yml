@@ -1,0 +1,90 @@
+google_maps.ES:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=ES:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.DE:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=DE:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.GB:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=GB:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.CH:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=CH:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.CZ:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=CZ:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.HU:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=HU:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.LV:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=LV:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.UA:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=UA:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.RO:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=RO:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.SK:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=SK:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.SE:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=SE:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.DK:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=DK:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.FI:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=FI:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.NO:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyBRz43As1JnFV9J7t-6KrpH67J_qa_ecUU&libraries=places&region=NO:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+google_maps.BG:
+  js:
+    //maps.googleapis.com/maps/api/js?key=AIzaSyAeVvuEwJkzAeTxSKLFxiy1w7QMw2imGh8&libraries=places&region=BG:  {type: external}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

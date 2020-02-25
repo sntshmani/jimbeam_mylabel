@@ -1,0 +1,10 @@
+{% set classes = 'field-link' %}
+{% for item in items %}
+  {% set url = item.content['#url'] %}
+  {% set title = item.content['#title'] %}
+
+  {% if url.toString() != '' %}
+    <a {{ attributes.addClass(classes) }} href="{{ url }}">{{ title }}</a>
+  {% endif %}
+
+{% endfor %}

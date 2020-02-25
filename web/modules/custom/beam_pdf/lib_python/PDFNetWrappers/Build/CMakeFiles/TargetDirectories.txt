@@ -1,0 +1,13 @@
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/CMakeFiles/install/strip.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/CMakeFiles/install.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/CMakeFiles/install/local.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/CMakeFiles/list_install_components.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/CMakeFiles/edit_cache.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/CMakeFiles/rebuild_cache.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/PDFNetPython/CMakeFiles/install/strip.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/PDFNetPython/CMakeFiles/edit_cache.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/PDFNetPython/CMakeFiles/PDFNetPython.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/PDFNetPython/CMakeFiles/rebuild_cache.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/PDFNetPython/CMakeFiles/list_install_components.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/PDFNetPython/CMakeFiles/install/local.dir
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/Build/PDFNetPython/CMakeFiles/install.dir

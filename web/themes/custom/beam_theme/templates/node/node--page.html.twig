@@ -1,0 +1,10 @@
+{% block content %}
+  {%
+  set classes = ['display-' ~ node.field_display.value ]
+  %}
+  <div {{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    {{ content.field_blocks }}
+  </div>
+{% endblock %}

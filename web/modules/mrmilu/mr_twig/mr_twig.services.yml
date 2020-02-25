@@ -1,0 +1,17 @@
+services:
+  mr_twig.twig.mr_block_extension:
+    class: Drupal\mr_twig\Twig\MrBlockExtension
+    tags:
+      - { name: twig.extension }
+  mr_twig.twig.mr_image_style:
+    class: Drupal\mr_twig\Twig\MrImageStyle
+    tags:
+      - { name: twig.extension }
+  mr_twig.twig.mr_path_lang:
+    class: Drupal\mr_twig\Twig\MrPathLang
+    tags:
+      - { name: twig.extension }
+  mr_twig.twig.mr_render_plugin:
+    class: Drupal\mr_twig\Twig\MrRenderPlugin
+    tags:
+      - { name: twig.extension }

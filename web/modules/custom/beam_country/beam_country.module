@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains beam_country.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function beam_country_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the beam_country module.
+    case 'help.page.beam_country':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Beam countries list') . '</p>';
+      return $output;
+
+    default:
+  }
+}

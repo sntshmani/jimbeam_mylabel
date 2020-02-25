@@ -1,0 +1,84 @@
+beam_order.order_form:
+  path: '/api/1.0/order'
+  defaults:
+    _controller: '\Drupal\beam_order\Controller\OrderAPIController::form'
+    _title: 'Create form'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+beam_order.image_label:
+  path: '/api/1.0/label'
+  defaults:
+    _controller: '\Drupal\beam_order\Controller\OrderAPIController::labelImage'
+    _title: 'Image label step 2'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+
+beam_order.prohibited_form:
+  path: '/api/1.0/prohibited'
+  defaults:
+    _controller: '\Drupal\beam_order\Controller\ProhibitedAPIController::form'
+    _title: 'Check Prohibited Word'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+
+beam_order.file_form:
+  path: '/api/1.0/file'
+  defaults:
+    _controller: '\Drupal\beam_order\Controller\FileAPIController::form'
+    _title: 'Upload file'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+beam_order.draw_form:
+  path: '/api/1.0/draw'
+  defaults:
+    _controller: '\Drupal\beam_order\Controller\FileAPIController::draw'
+    _title: 'Convert image to drawing'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+beam_order.view:
+  path: '/admin/label'
+  defaults:
+    _form: '\Drupal\beam_order\Form\LabelViewForm'
+    _title: 'Label list'
+  requirements:
+    _permission: 'view order entities'
+  options:
+    _admin_route: TRUE
+
+beam_order.add_label:
+  path: '/label/add'
+  defaults:
+    _form: '\Drupal\beam_order\Form\LabelAdminForm'
+    _title: 'Add label'
+  requirements:
+    _permission: 'add order entities'
+  options:
+    _admin_route: TRUE
+
+beam_order.view_comments:
+  path: '/admin/order/{beam_order}/comments'
+  defaults:
+    _title: 'Comments'
+    _controller: '\Drupal\beam_order\Controller\OrderCommentsController::show'
+  requirements:
+    _permission: 'view order entities'
+  options:
+    _admin_route: TRUE
+
+beam_order.add_comment:
+  path: '/admin/order/{beam_order}/comments/add'
+  defaults:
+    _title: 'Add comment'
+    _controller: '\Drupal\beam_order\Controller\OrderCommentsController::add'
+  requirements:
+    _permission: 'view order entities'
+  options:
+    _admin_route: TRUE

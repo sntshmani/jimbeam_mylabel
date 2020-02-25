@@ -1,0 +1,8 @@
+name: 'Beam Administration'
+type: module
+description: 'Beam administration'
+core: 8.x
+package: 'Beam'
+
+dependencies:
+  - beam_misc:beam_misc

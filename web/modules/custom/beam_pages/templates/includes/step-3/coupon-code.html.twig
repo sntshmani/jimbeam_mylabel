@@ -1,0 +1,31 @@
+<div class="step-3__dropdown">
+  {% if step_label.step_3_code_title %}
+    <div class="step-3__dropdown__title">{{ step_label.step_3_code_title }}</div>
+  {% endif %}
+  <div class="accordion-panel">
+    {% if step_label.step_3_code_text %}
+      {{ step_label.step_3_code_text }}
+    {% endif %}
+    <div class="step-3__coupon">
+      <div class="step-3__wrapper-inputs">
+        <div class="wrapper-input">
+          <label for="coupon_code">{{ 'Enter Unique Code'|t }}</label>
+            <div class="coupon-input">
+              <input type="text" name="coupon_code" placeholder="{{ 'For example: 012X345X678X'|t }}"
+                 v-model="form.coupon_code"/>
+              
+              <button class="button" type="button" @click="validateCoupon()"
+                    v-bind:class="{disabled: !form.coupon_code, completed: step3CouponValid}">{{ 'Validate'|t }}</button>
+            </div>
+          <div class="input-error" v-if="showMsgAvailableCoupon">
+            {{ 'Unavailable coupon code'|t }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    {% if step_label.step_3_code_unique %}
+      <div v-popup=""><a type="button" href="#" class="red-link">{{ step_label.step_3_code_unique }}</a></div>
+    {% endif %}
+  </div>
+</div>

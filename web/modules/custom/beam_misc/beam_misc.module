@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\beam_misc\Helper\LoginHelper;
+use Drupal\beam_misc\Helper\UserHelper;
+
+function beam_misc_page_attachments(array &$attachments) {
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  if ($theme == 'adminimal_theme') {
+    $attachments['#attached']['library'][] = 'beam_misc/extra';
+  }
+}
+
+function beam_misc_toolbar_alter(&$items) {
+  if (!UserHelper::isAdmin()) {
+    $items['administration']['#wrapper_attributes']['class'] = 'visually-hidden';
+    $items['administration_search']['#wrapper_attributes']['class'] = 'visually-hidden';
+  }
+}
+
+function beam_misc_user_login($account) {
+  if (UserHelper::isCountry()) {
+    LoginHelper::redirectAfterLogin('beam_order.view');
+  }
+}
+

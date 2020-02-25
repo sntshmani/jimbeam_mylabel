@@ -1,0 +1,5 @@
+entity.beam_customer.collection:
+  title: 'Customers'
+  route_name: entity.beam_customer.collection
+  menu_name: results
+  weight: 2

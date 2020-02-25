@@ -1,0 +1,13 @@
+name: 'Beam Order'
+type: module
+description: 'Beam Order Form'
+core: 8.x
+package: 'Beam'
+
+dependencies:
+  - beam_misc:beam_misc
+  - beam_export:beam_export
+  - beam_code:beam_code
+  - beam_country:beam_country
+  - beam_customer:beam_customer
+  - beam_pdf:beam_pdf

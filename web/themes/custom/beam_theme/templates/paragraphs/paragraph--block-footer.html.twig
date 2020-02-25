@@ -1,0 +1,14 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'block-footer', class_background
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="Custom-bottle__footer__text">
+      {{ content.field_body }}
+    </div>
+  </div>
+{% endblock paragraph %}

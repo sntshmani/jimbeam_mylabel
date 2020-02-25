@@ -1,0 +1,31 @@
+beam_generator.generate_label:
+  path: '/api/1.0/generate-label'
+  defaults:
+    _controller: '\Drupal\beam_generator\Controller\GeneratorAPIController::generateLabel'
+    _title: 'Generate label'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+beam_generator.print_label:
+  path: '/api/1.0/print-label/{beam_order}'
+  defaults:
+    _controller: '\Drupal\beam_generator\Controller\GeneratorAPIController::printLabel'
+    _title: 'Print label'
+  methods: [PUT]
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      beam_order:
+        type: entity:beam_order
+
+
+beam_generator.download_label:
+  path: '/api/1.0/download-label'
+  defaults:
+    _controller: '\Drupal\beam_generator\Controller\GeneratorAPIController::downloadLabel'
+    _title: 'Download label'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'

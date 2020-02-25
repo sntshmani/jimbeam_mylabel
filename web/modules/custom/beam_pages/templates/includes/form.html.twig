@@ -1,0 +1,59 @@
+<form id="custom-bottle" class="Custom-bottle" @submit.prevent="submitForm"
+      v-bind:class="{'Custom-bottle--step-3': showStep == 3, 'Custom-bottle--step-1': showStep == 1}"
+      novalidate
+>
+  <div class="Custom-bottle__header">
+    <step-label step1="{{ step_label.step_1_title }}" step2="{{ step_label.step_2_title }}" step3="{{ step_label.step_3_title }}"></step-label>
+    <div class="only-desktop">
+      <span class="Custom-bottle__step-label" v-bind:class="{'active':(showStep >= 1)}">{{ 'Step 1'|t }}</span>
+      <span class="Custom-bottle__step-label" v-bind:class="{'active':(showStep >= 2)}">{{ 'Step 2'|t }}</span>
+      <span class="Custom-bottle__step-label" v-bind:class="{'active':(showStep >= 3)}">{{ 'Step 3'|t }}</span>
+    </div>
+    <div class="only-mobile wrapper-steps">
+      <span class="Custom-bottle__step-label" v-bind:class="{'completed':(showStep >= 1), 'active':(showStep == 1)}">{{ '1'|t }}</span>
+      <span class="Custom-bottle__step-label" v-bind:class="{'completed':(showStep >= 2), 'active':(showStep == 2)}">{{ '2'|t }}</span>
+      <span class="Custom-bottle__step-label" v-bind:class="{'completed':(showStep >= 3), 'active':(showStep == 3)}">{{ '3'|t }}</span>
+    </div>
+  </div>
+
+  <div class="Custom-bottle__content">
+    <div class="step-1" v-if="showStep == 1">
+      {% include '@beam_pages/includes/step-1.html.twig' %}
+    </div>
+    <div class="step-2" v-if="showStep == 2">
+      {% include '@beam_pages/includes/step-2.html.twig' %}
+    </div>
+    <div class="step-3" v-if="showStep == 3">
+      {% if is_private %}
+        {% include '@beam_pages/includes/step-3-private.html.twig' %}
+      {% else %}
+        {% include '@beam_pages/includes/step-3.html.twig' %}
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="Custom-bottle__footer">
+    <a href="{{ url('entity.node.canonical', {'node': 1}) }}" v-if="showStep == 1">
+      <button type="button" class="button">{{ 'Exit'|t }}</button>
+    </a>
+    <button type="button" class="button" @click="previousStep()" v-if="showStep > 1">{{ 'Previous'|t }}</button>
+
+    {% if step_label.step_help %}
+      <div class="Custom-bottle__footer__text">{{ step_label.step_help }}</div>
+    {% endif %}
+
+    <button
+    :disabled="!form.bottle || form.processing_step"
+    v-bind:class="{'disabled': !form.bottle || form.processing_step}" type="button" class="button" @click="(e) => {nextStep(e)}" v-if="showStep == 1" >{{ 'Next'|t }}</button>
+    <button
+    :disabled="!form.image_subhead || !form.image_label || !form.step2_legal || (showPictureLabel==1 && !form.image_picture) || form.processing_step"
+    v-bind:class="{'disabled': !form.image_subhead || !form.image_label || !form.step2_legal || (showPictureLabel==1 && !form.image_picture) || form.processing_step}"
+    type="button" class="button" @click="(e) => {nextStep(e)}" v-if="showStep == 2" >{{ 'Next'|t }}</button>
+    <button class="button" v-if="showStep == 3" id="btn-submit"
+            {% if not is_private %}
+              :disabled="!availableCoupon"
+            {% endif %}
+            type="submit">{{ 'Confirm & Finish'|t }}</button>
+  </div>
+
+</form>

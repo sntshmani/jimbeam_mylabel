@@ -1,0 +1,7 @@
+<div class="wrapper-input" v-bind:class="{ 'form-group--error': $v.form.email.$error }">
+  <label for="email">{{ 'E-Mail'|t }}</label>
+  <input type="email" name="email" placeholder="{{ 'example@domain.net'|t }}" v-model="$v.form.email.$model"/>
+  <div class="input-error input-error-msg">
+    {{ 'Required field or unvalid data'|t }}
+  </div>
+</div>

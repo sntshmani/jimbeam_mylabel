@@ -1,0 +1,25 @@
+<footer>
+  <div class="container-fluid text-center">
+    <div class="footer-main">
+      <img src="/{{ images_dir }}/james-logo.jpg" alt="">
+      {% include directory ~ '/templates/regions/footer/social.html.twig' %}
+      {% include directory ~  '/templates/regions/footer/language-switcher.html.twig' %}
+      <div class="footer-links">
+        {{ menu_footer }}
+      </div>
+      <div class="footer-copyright">
+        {% if footer_copyright %}
+          {{ footer_copyright | t }}
+        {% endif %}
+      </div>
+      <div class="footer-links footer-links2">
+        {{ menu_footer_bottom }}
+      </div>
+      <div class="drink-logo">
+        {% if link_drinksmart %}
+          <a href="{{ link_drinksmart|t }}" target="_blank"><img src="/{{ images_dir }}/drink-smart.jpg" alt=""></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>

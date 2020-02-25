@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains beam_code.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function beam_code_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the beam_code module.
+    case 'help.page.beam_code':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Beam Code') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function beam_code_theme() {
+  return [
+    'beam_code' => [
+      'render element' => 'children',
+    ],
+  ];
+}

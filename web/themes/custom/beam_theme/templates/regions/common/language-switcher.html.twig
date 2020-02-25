@@ -1,0 +1,19 @@
+<div class="language-flag">
+  <div class="dropdown" v-langselector>
+    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+      <i class="fa fa-globe fa-lg"></i>{{ current_language_label }}
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="dropdown-menu">
+      {% for key, language in languages %}
+        {% if key != current_language_id %}
+          <a href="{{ mr_path_lang('<current>', {}, {}, key) }}" class="language-link dropdown-item" hreflang="{{ key }}">
+            <label>{{ language }}</label>
+            <span class="flag-1"><i class="fa fa-globe fa-fw"></i></span>
+            <span>{{ key }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

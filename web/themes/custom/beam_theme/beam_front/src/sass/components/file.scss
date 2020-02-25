@@ -1,0 +1,38 @@
+@import '../common/variables.scss';
+
+.File {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  &__icon {
+    width: 33px;
+    height: 33px;
+    background: url('../assets/icons/label-picture.png') right center no-repeat;
+    margin-bottom: 12px;
+  }
+  &__placeholder {
+    font-size: 14px;
+    font-family: $font--tertiary;
+    letter-spacing: 1.5px;
+    width: 110px;
+  }
+  &__picture {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &.with-image {
+    .File__icon {
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}

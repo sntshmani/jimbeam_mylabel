@@ -1,0 +1,53 @@
+@import '../common/variables.scss';
+
+.Select {
+  position: relative;
+  &__native {
+    display: none;
+  }
+  &__desktop {
+    &__dropdown {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background: white;
+      border-radius: 2px;
+      border: 1px solid $grey-background;
+      max-height: 200px;
+      overflow: scroll;
+      &.open {
+        display: block;
+      }
+    }
+  }
+  &__option {
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid $grey-background;
+    line-height: 40px;
+    color: black;
+    font-family: $font;
+    font-size: 14px;
+    box-sizing: border-box;
+    &:last-child {
+      border: none;
+    }
+    &:hover {
+      background: $grey-background;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .Select {
+    &__native {
+      display: block;
+    }
+    &__desktop {
+      display: none;
+    }
+  }
+}

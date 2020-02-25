@@ -1,0 +1,2 @@
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/PDFNetC/Lib/PDFNetPython.py
+/src/web/modules/custom/beam_pdf/lib_python/PDFNetWrappers/PDFNetC/Lib/_PDFNetPython.so

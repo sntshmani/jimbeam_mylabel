@@ -1,0 +1,15 @@
+.pac-container {
+  &.pac-logo {
+    &:after {
+      content: none
+    }
+  }
+  .pac-item {
+    .pac-icon {
+      display: none;
+    }
+    &-query {
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - beam_order
+id: beam_order_generate_label
+label: 'Generate label in bottle'
+type: beam_order
+plugin: beam_order_generate_label
+configuration: {  }

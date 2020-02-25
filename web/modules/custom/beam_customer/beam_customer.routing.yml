@@ -1,0 +1,9 @@
+beam_customer.export:
+  path: '/admin/customer/export'
+  defaults:
+    _form: '\Drupal\beam_customer\Form\CustomerExportForm'
+    _title: 'Customer Export'
+  requirements:
+    _permission: 'export customer list'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,11 @@
+entity.beam_country.collection:
+  title: 'Countries'
+  route_name: entity.beam_country.collection
+  menu_name: results
+  weight: 5
+
+beam_country.own_country:
+  title: 'Country administration'
+  route_name: beam_country.own_country
+  menu_name: results
+  weight: 6

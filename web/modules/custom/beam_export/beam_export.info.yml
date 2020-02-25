@@ -1,0 +1,5 @@
+name: 'Beam Export'
+type: module
+description: 'Auxiliar module to export entities'
+core: 8.x
+package: 'Beam'

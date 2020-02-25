@@ -1,0 +1,8 @@
+name: 'Beam Generator'
+type: module
+description: 'Plugin actions for order entity'
+core: 8.x
+package: 'Beam'
+
+dependencies:
+  - beam_order:beam_order

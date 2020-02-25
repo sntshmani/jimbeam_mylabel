@@ -1,0 +1,56 @@
+<?php
+
+use Drupal\beam_misc\Helper\CookieHelper;
+use Drupal\beam_misc\Helper\LoginHelper;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function beam_pages_theme() {
+  return [
+    'custom_bottle_form' => [
+      'variables' => [
+        'subhead_options' => [],
+        'bottles' => [],
+        'enabled' => NULL,
+        'fixed_images' => [],
+        'step_label' => [],
+        'phone_codes' => [],
+        'default_phone_code' => NULL,
+        'default_country' => NULL,
+        'country_name' => NULL,
+        'show_picture_label' => NULL,
+      ],
+    ],
+    'custom_bottle_private_form' => [
+      'variables' => [
+        'subhead_options' => [],
+        'bottles' => [],
+        'enabled' => NULL,
+        'fixed_images' => [],
+        'step_label' => [],
+        'default_country' => NULL,
+        'country_name' => NULL,
+        'show_picture_label' => NULL,
+      ],
+    ],
+  ];
+}
+
+function beam_pages_user_login($account) {
+  $roles = \Drupal::currentUser()->getRoles();
+  if (in_array('custom_bottle_private', $roles)) {
+    LoginHelper::redirectAfterLogin('beam_pages.custom_bottle_private');
+  }
+}
+
+function template_preprocess_custom_bottle_form(&$variables) {
+  $variables['link_terms'] = \Drupal::state()->get('link_terms');
+  $variables['link_privacy'] = \Drupal::state()->get('link_privacy');
+}
+
+function template_preprocess_custom_bottle_private_formm(&$variables) {
+  $variables['link_terms'] = \Drupal::state()->get('link_terms');
+  $variables['link_privacy'] = \Drupal::state()->get('link_privacy');
+}

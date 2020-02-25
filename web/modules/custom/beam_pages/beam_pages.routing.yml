@@ -1,0 +1,21 @@
+beam_pages.custom_bottle:
+  path: '/custom-bottle'
+  defaults:
+    _controller: '\Drupal\beam_pages\Controller\CustomBottleController::page'
+    _title: 'Custom Bottle'
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: 'TRUE'
+
+
+beam_pages.custom_bottle_private:
+  path: '/custom-bottle-private'
+  defaults:
+    _controller: '\Drupal\beam_pages\Controller\CustomBottlePrivateController::page'
+    _title: 'Custom Bottle Private'
+  requirements:
+    _permission: 'custom bottle private'
+  options:
+    no_cache: 'TRUE'
+

@@ -1,0 +1,35 @@
+<location-box inline-template
+              web-domain="{{ web_domain }}"
+>
+  <div class="location-box-container">
+    <div class="location-box">
+      <div class="logo-stamp"><img src="/{{ images_dir }}/jim-beam-stamp.jpg" alt="JimBeam Stamp"></div>
+      <div class="container">
+        <div class="row">
+          <div class="close-search-ico"><i class="fas fa-times"></i></div>
+          <div class="col-md-6 center">
+            <span v-locationclose class="location-box__close"></span>
+            <div class="title">{{ 'Select your location' }}</div>
+            <hr>
+            <h2>{{ 'Language' }}</h2>
+            <div class="language_wrapper">
+              {% for key, language in languages %}
+                <a class="dropdown-item"
+                   href="{{ mr_path_lang('<current>', {}, {}, key) }}">{{ language }}</a>
+              {% endfor %}
+            </div>
+            <h2>{{ 'Country' }}</h2>
+            <div class="country_wrapper">
+              {% for country in countries %}
+                <div class="dropdown-item-country" @click="clickCountry('{{ country.code }}', '{{ mr_path_lang('<current>', {}, {},  country.default_language ) }}')">
+                  <span>{{ country.name }}</span>
+                  <span class="language">{{ country.default_language_name }}</span>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</location-box>

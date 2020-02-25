@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - beam_order
+id: beam_order_download
+label: 'Download pdf with labels'
+type: beam_order
+plugin: beam_order_download
+configuration: {  }

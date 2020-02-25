@@ -1,0 +1,19 @@
+global-styling:
+  #version: 1.x
+  css:
+    theme:
+      beam_front/dist/css/bundle.css: {}
+      beam_front/lib/slick-carousel/slick/slick.css: {}
+      beam_front/lib/city-autocomplete/city-autocomplete.css: {}
+      https://use.typekit.net/mli2fdb.css: {type: external}
+  js:
+    beam_front/dist/beam-front.js: {scope: footer}
+    beam_front/lib/slick-carousel/slick/slick.js: {scope: footer}
+    #//maps.googleapis.com/maps/api/js?key=AIzaSyAeVvuEwJkzAeTxSKLFxiy1w7QMw2imGh8&libraries=places&region=ES:  {type: external}
+    beam_front/lib/city-autocomplete/jquery.city-autocomplete.min.js: {scope: footer, minified: true}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

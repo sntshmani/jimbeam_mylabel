@@ -1,0 +1,50 @@
+<?php
+
+use Drupal\beam_misc\Helper\EntityHelper;
+
+/**
+ * Install fields: Unlimited uses (boolean) and Remaining uses (Integer)
+ */
+function beam_code_update_8001() {
+  $fieldUnlimited = EntityHelper::createFieldBoolean('Unlimited');
+  $fieldRemaining = EntityHelper::createFieldInteger('Remaining Uses', TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('unlimited', 'beam_code', 'beam_code', $fieldUnlimited);
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('remaining', 'beam_code', 'beam_code', $fieldRemaining);
+}
+
+/**
+ * Uninstall unused fields: uid and status
+ */
+function beam_code_update_8002() {
+  $definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+  if ($fieldUid = $definition_update_manager->getFieldStorageDefinition('uid', 'beam_code')) {
+    $definition_update_manager->uninstallFieldStorageDefinition($fieldUid);
+  }
+  if ($fieldStatus = $definition_update_manager->getFieldStorageDefinition('status', 'beam_code')) {
+    $definition_update_manager->uninstallFieldStorageDefinition($fieldStatus);
+  }
+}
+
+/**
+ * Install fields: Current uses (Integer)
+ */
+function beam_code_update_8003() {
+  $fieldCurrent = EntityHelper::createFieldInteger('Current Uses', TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('current', 'beam_code', 'beam_code', $fieldCurrent);
+}
+
+/**
+ * Install fields: Provider (Textfield)
+ */
+function beam_code_update_8004() {
+  $fieldCurrent = EntityHelper::createFieldTextfield('Provider', FALSE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('provider', 'beam_code', 'beam_code', $fieldCurrent);
+}
+

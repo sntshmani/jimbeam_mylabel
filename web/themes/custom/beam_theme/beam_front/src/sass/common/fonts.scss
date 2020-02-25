@@ -1,0 +1,156 @@
+$path: '../assets/fonts/';
+
+@font-face {
+  font-family: 'Lutz Headline';
+  src: url($path + 'LutzHeadline.woff2') format('woff2'),
+  url($path + 'LutzHeadline.woff') format('woff'),
+  url($path + 'LutzHeadline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-Semibold.woff2') format('woff2'),
+  url($path + 'Calibre-Semibold.woff') format('woff'),
+  url($path + 'Calibre-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-SemiboldItalic.woff2') format('woff2'),
+  url($path + 'Calibre-SemiboldItalic.woff') format('woff'),
+  url($path + 'Calibre-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-BlackItalic.woff2') format('woff2'),
+  url($path + 'Calibre-BlackItalic.woff') format('woff'),
+  url($path + 'Calibre-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-Medium.woff2') format('woff2'),
+  url($path + 'Calibre-Medium.woff') format('woff'),
+  url($path + 'Calibre-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-MediumItalic.woff2') format('woff2'),
+  url($path + 'Calibre-MediumItalic.woff') format('woff'),
+  url($path + 'Calibre-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-RegularItalic.woff2') format('woff2'),
+  url($path + 'Calibre-RegularItalic.woff') format('woff'),
+  url($path + 'Calibre-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-Light.woff2') format('woff2'),
+  url($path + 'Calibre-Light.woff') format('woff'),
+  url($path + 'Calibre-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-ThinItalic.woff2') format('woff2'),
+  url($path + 'Calibre-ThinItalic.woff') format('woff'),
+  url($path + 'Calibre-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-Regular.woff2') format('woff2'),
+  url($path + 'Calibre-Regular.woff') format('woff'),
+  url($path + 'Calibre-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-Bold.woff2') format('woff2'),
+  url($path + 'Calibre-Bold.woff') format('woff'),
+  url($path + 'Calibre-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-BoldItalic.woff2') format('woff2'),
+  url($path + 'Calibre-BoldItalic.woff') format('woff'),
+  url($path + 'Calibre-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-Thin.woff2') format('woff2'),
+  url($path + 'Calibre-Thin.woff') format('woff'),
+  url($path + 'Calibre-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-Black.woff2') format('woff2'),
+  url($path + 'Calibre-Black.woff') format('woff'),
+  url($path + 'Calibre-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Buinton';
+  src: url($path + 'Buinton-Regular.woff2') format('woff2'),
+  url($path + 'Buinton-Regular.woff') format('woff'),
+  url($path + 'Buinton-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url($path + 'Calibre-LightItalic.woff2') format('woff2'),
+  url($path + 'Calibre-LightItalic.woff') format('woff'),
+  url($path + 'Calibre-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+    font-family: 'Americana Std';
+    src: url($path + 'AmericanaStd-ExtraBold.woff2') format('woff2'),
+        url($path + 'AmericanaStd-ExtraBold.woff') format('woff'),
+        url($path + 'AmericanaStd-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+

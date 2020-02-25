@@ -1,0 +1,22 @@
+{#
+/**
+ * @file beam_code.html.twig
+ * Default theme implementation to present Coupon data.
+ *
+ * This template is used when viewing Coupon pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_beam_code()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('beam_code') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

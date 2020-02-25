@@ -1,0 +1,79 @@
+beam_administration.vars:
+  path: '/admin/beam/vars'
+  defaults:
+    _form: '\Drupal\beam_administration\Form\VarsForm'
+    _title: 'Variables'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+beam_administration.social_network:
+  path: '/admin/beam/social-network'
+  defaults:
+    _form: '\Drupal\beam_administration\Form\SocialNetworkForm'
+    _title: 'Social Networks'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+beam_administration.bottles:
+  path: '/admin/beam/bottles'
+  defaults:
+    _form: '\Drupal\beam_administration\Form\BottlesForm'
+    _title: 'Bottles'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+beam_administration.country_bottles:
+  path: '/admin/beam/country-bottles'
+  defaults:
+    _form: '\Drupal\beam_administration\Form\CountryBottlesForm'
+    _title: 'Country Bottles'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+beam_administration.country_options:
+  path: '/admin/beam/country-options'
+  defaults:
+    _form: '\Drupal\beam_administration\Form\CountryOptionsForm'
+    _title: 'Country Options'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+beam_administration.coupon_generator:
+  path: '/admin/beam/coupon-generator'
+  defaults:
+    _form: '\Drupal\beam_administration\Form\CouponGeneratorForm'
+    _title: 'Code Generator'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+beam_administration.import_codes:
+  path: '/admin/beam/import-codes'
+  defaults:
+    _form: '\Drupal\beam_administration\Form\ImportCodesForm'
+    _title: 'Import Codes'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+beam_administration.step_label:
+  path: '/admin/beam/step-label'
+  defaults:
+    _form: '\Drupal\beam_administration\Form\StepLabelForm'
+    _title: 'Step Label'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

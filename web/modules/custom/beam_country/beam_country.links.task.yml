@@ -1,0 +1,15 @@
+entity.beam_country.canonical:
+  route_name: entity.beam_country.canonical
+  base_route: entity.beam_country.canonical
+  title: 'View'
+
+entity.beam_country.edit_form:
+  route_name: entity.beam_country.edit_form
+  base_route: entity.beam_country.canonical
+  title: 'Edit'
+
+entity.beam_country.delete_form:
+  route_name:  entity.beam_country.delete_form
+  base_route:  entity.beam_country.canonical
+  title: Delete
+  weight: 10
