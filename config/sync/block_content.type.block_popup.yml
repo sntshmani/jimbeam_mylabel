@@ -1,0 +1,8 @@
+uuid: 4f739a1f-bf02-44fe-aff2-18819de51df9
+langcode: en
+status: true
+dependencies: {  }
+id: block_popup
+label: 'Block Popup'
+revision: 0
+description: ''

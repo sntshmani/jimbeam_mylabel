@@ -1,0 +1,31 @@
+session:
+  parameter: language
+url:
+  source: path_prefix
+  prefixes:
+    en: ''
+    de: de
+    es: es
+    fr: fr
+    lv: lv
+    hu: hu
+    uk: uk
+    ro: ro
+    cs: cs
+    sk: sk
+    bg: bg
+  domains:
+    en: mybeamlabel.dev.mrmilu.com
+    de: ''
+    es: ''
+    fr: ''
+    lv: ''
+    hu: ''
+    uk: ''
+    ro: ''
+    cs: ''
+    sk: ''
+    bg: ''
+selected_langcode: en
+_core:
+  default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

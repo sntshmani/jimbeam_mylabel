@@ -1,0 +1,14 @@
+uuid: b4c6aae5-8351-458d-9c07-6161ee993985
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.custom_bottle_private
+  module:
+    - user
+id: user_remove_role_action.custom_bottle_private
+label: 'Remove the Custom bottle private role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: custom_bottle_private

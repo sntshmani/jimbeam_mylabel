@@ -1,0 +1,28 @@
+uuid: 32152a4b-bcfb-4883-8493-d85d43ebe6ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_country
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_country:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  member_for:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,28 @@
+uuid: fd63577f-9042-4208-9f96-a2c3714d3ee9
+langcode: en
+status: true
+dependencies: {  }
+id: country
+label: Country
+weight: 5
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access toolbar'
+  - 'add code entities'
+  - 'add order entities'
+  - 'administer code entities'
+  - 'administer customer entities'
+  - 'administer order entities'
+  - 'edit customer entities'
+  - 'export code list'
+  - 'export customer list'
+  - 'export order list'
+  - 'generate codes'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'view beam_results in toolbar'
+  - 'view code entities'
+  - 'view customer entities'
+  - 'view order entities'
+  - 'view the administration theme'

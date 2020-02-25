@@ -1,0 +1,14 @@
+uuid: d65d58dc-a95f-463a-91d2-130198839d1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.custom_bottle_private
+  module:
+    - user
+id: user_add_role_action.custom_bottle_private
+label: 'Add the Custom bottle private role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: custom_bottle_private

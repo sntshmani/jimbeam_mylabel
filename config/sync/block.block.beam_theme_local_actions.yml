@@ -1,0 +1,20 @@
+uuid: 3cb016aa-78fa-4ad4-8622-360a31bb036c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - beam_theme
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: beam_theme_local_actions
+theme: beam_theme
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 681879e0-a064-4528-9f3c-0b7d3b12e6ab
+langcode: es
+status: true
+dependencies:
+  module:
+    - beam_country
+    - user
+id: user.field_country
+field_name: field_country
+entity_type: user
+type: entity_reference
+settings:
+  target_type: beam_country
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

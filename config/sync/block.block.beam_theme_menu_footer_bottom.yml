@@ -1,0 +1,25 @@
+uuid: 6f8296af-1197-4d05-ad32-4292415b8136
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-bottom
+  module:
+    - system
+  theme:
+    - beam_theme
+id: beam_theme_menu_footer_bottom
+theme: beam_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-bottom'
+settings:
+  id: 'system_menu_block:footer-bottom'
+  label: 'Footer bottom'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

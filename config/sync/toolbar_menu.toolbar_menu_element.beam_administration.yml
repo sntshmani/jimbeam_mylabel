@@ -1,0 +1,9 @@
+uuid: 63c7d75d-61f1-46c7-9d5e-b77368684e93
+langcode: en
+status: true
+dependencies: {  }
+id: beam_administration
+label: 'Beam Configuration'
+weight: -10
+menu: toolbar
+rewrite_label: false

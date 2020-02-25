@@ -1,0 +1,21 @@
+uuid: 4eb66146-877d-4bc2-a4e1-fbab328a1315
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display
+    - node.type.page
+  module:
+    - options
+id: node.page.field_display
+field_name: field_display
+entity_type: node
+bundle: page
+label: Display
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

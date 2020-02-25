@@ -1,0 +1,8 @@
+uuid: 3be2b098-8b70-4596-9c66-971fa2d3dbcc
+langcode: en
+status: true
+dependencies: {  }
+id: order_comment
+label: 'Order comment'
+target_entity_type_id: beam_order
+description: ''

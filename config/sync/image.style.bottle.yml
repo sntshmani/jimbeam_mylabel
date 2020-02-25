@@ -1,0 +1,15 @@
+uuid: 1fe1847a-a2a1-4916-b9e6-ed4000ce47ba
+langcode: en
+status: true
+dependencies: {  }
+name: bottle
+label: Bottle
+effects:
+  ca6592ee-0404-4477-a6e4-bca587da3e98:
+    uuid: ca6592ee-0404-4477-a6e4-bca587da3e98
+    id: image_scale
+    weight: -10
+    data:
+      width: 204
+      height: 606
+      upscale: false

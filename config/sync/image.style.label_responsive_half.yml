@@ -1,0 +1,15 @@
+uuid: dcedfbbe-3f8b-4a49-9135-d887268ea20e
+langcode: en
+status: true
+dependencies: {  }
+name: label_responsive_half
+label: 'Label responsive half'
+effects:
+  75a0d77c-8d33-4d79-a5fe-43bffe9a60e9:
+    uuid: 75a0d77c-8d33-4d79-a5fe-43bffe9a60e9
+    id: image_scale
+    weight: 1
+    data:
+      width: 470
+      height: 324
+      upscale: false

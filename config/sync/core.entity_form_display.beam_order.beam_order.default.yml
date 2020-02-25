@@ -1,0 +1,120 @@
+uuid: 7ec0f7d0-2016-4d42-9d96-941fb22abdec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.beam_order.beam_order.field_order_comments
+    - image.style.thumbnail
+  module:
+    - beam_order
+    - image
+id: beam_order.beam_order.default
+targetEntityType: beam_order
+bundle: beam_order
+mode: default
+content:
+  bottle:
+    type: options_buttons
+    region: content
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  code_id:
+    type: options_select
+    region: content
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  country_id:
+    type: options_select
+    region: content
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  customer_id:
+    type: options_select
+    region: content
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  image_label:
+    type: string_textfield
+    region: content
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  image_picture:
+    label: hidden
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  image_subhead:
+    type: string_textfield
+    region: content
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  offers_beamsuntory:
+    type: boolean_checkbox
+    checked: checked
+    region: content
+    weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  offers_jimbeam:
+    type: boolean_checkbox
+    checked: checked
+    region: content
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  pdf_url:
+    type: string_textfield
+    region: content
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  privacy_policy:
+    type: boolean_checkbox
+    checked: checked
+    region: content
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    checked: checked
+    region: content
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  terms:
+    type: boolean_checkbox
+    checked: checked
+    region: content
+    weight: 8
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: options_select
+    region: content
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_order_comments: true

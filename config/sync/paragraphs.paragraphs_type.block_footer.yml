@@ -1,0 +1,9 @@
+uuid: ddd5eb83-dc24-4d5d-9e49-2e813e055e55
+langcode: en
+status: true
+dependencies: {  }
+id: block_footer
+label: Footer
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

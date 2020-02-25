@@ -1,0 +1,10 @@
+uuid: c70319b3-9ad3-4f78-b227-47273753b32d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
+id: footer
+label: Footer
+description: 'Menu footer top'
+locked: true

@@ -1,0 +1,14 @@
+uuid: c6aa2ca6-3a53-4946-abf2-74949c161049
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.country
+  module:
+    - user
+id: user_add_role_action.country
+label: 'Add the Country role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: country

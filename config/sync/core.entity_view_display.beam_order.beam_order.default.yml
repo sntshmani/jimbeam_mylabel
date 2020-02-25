@@ -1,0 +1,89 @@
+uuid: ede2ae4e-b197-4861-b2fc-281d96768a65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.beam_order.beam_order.field_order_comments
+  module:
+    - beam_order
+    - image
+    - options
+id: beam_order.beam_order.default
+targetEntityType: beam_order
+bundle: beam_order
+mode: default
+content:
+  bottle:
+    label: inline
+    type: list_default
+    region: content
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  code_id:
+    label: above
+    type: entity_reference_label
+    region: content
+    weight: 5
+    settings:
+      link: true
+    third_party_settings: {  }
+  country_id:
+    label: above
+    type: entity_reference_label
+    region: content
+    weight: 6
+    settings:
+      link: true
+    third_party_settings: {  }
+  customer_id:
+    label: above
+    type: entity_reference_label
+    region: content
+    weight: 7
+    settings:
+      link: true
+    third_party_settings: {  }
+  image_label:
+    label: inline
+    type: string
+    region: content
+    weight: 3
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  image_picture:
+    label: hidden
+    type: image
+    weight: 1
+    region: content
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  image_subhead:
+    label: inline
+    type: string
+    region: content
+    weight: 2
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  pdf_url:
+    label: inline
+    type: string
+    region: content
+    weight: 4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    label: above
+    type: entity_reference_label
+    region: content
+    weight: 8
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  field_order_comments: true

@@ -1,0 +1,15 @@
+uuid: beb4cfb4-65cc-45a6-99d4-9f12dd822f72
+langcode: en
+status: true
+dependencies: {  }
+name: picture_bottle
+label: 'Picture bottle'
+effects:
+  716828b8-98be-44e6-aa7e-08464ff42a82:
+    uuid: 716828b8-98be-44e6-aa7e-08464ff42a82
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 160
+      height: 196
+      anchor: center-center

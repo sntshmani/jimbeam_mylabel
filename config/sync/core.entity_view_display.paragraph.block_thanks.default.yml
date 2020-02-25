@@ -1,0 +1,75 @@
+uuid: ff9a6325-aef0-4a07-9806-54933425f389
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_thanks.field_body
+    - field.field.paragraph.block_thanks.field_image
+    - field.field.paragraph.block_thanks.field_image_mobile
+    - field.field.paragraph.block_thanks.field_link
+    - field.field.paragraph.block_thanks.field_subtitle
+    - field.field.paragraph.block_thanks.field_title
+    - paragraphs.paragraphs_type.block_thanks
+  module:
+    - image
+    - link
+    - text
+id: paragraph.block_thanks.default
+targetEntityType: paragraph
+bundle: block_thanks
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_mobile:
+    weight: 5
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

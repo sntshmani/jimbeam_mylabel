@@ -1,0 +1,15 @@
+uuid: e368e5bb-d74c-4f9a-9426-7b2fed88d4ca
+langcode: es
+status: true
+dependencies: {  }
+name: height_316
+label: 'Height 316'
+effects:
+  3b091cb9-9a64-4adc-8069-e7422d869c4d:
+    uuid: 3b091cb9-9a64-4adc-8069-e7422d869c4d
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 316
+      upscale: false

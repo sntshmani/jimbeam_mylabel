@@ -1,0 +1,14 @@
+uuid: 13fe9ca9-fd2a-47e7-9390-25e3bf969c20
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.country
+  module:
+    - user
+id: user_remove_role_action.country
+label: 'Remove the Country role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: country

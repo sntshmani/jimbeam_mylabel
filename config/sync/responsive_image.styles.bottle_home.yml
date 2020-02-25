@@ -1,0 +1,24 @@
+uuid: a17f7147-aff9-4c78-9fae-ac999f54806c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.bottle_home
+    - image.style.bottle_home_responsive
+  theme:
+    - beam_theme
+id: bottle_home
+label: 'Bottle home'
+image_style_mappings:
+  -
+    breakpoint_id: beam_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bottle_home_responsive
+  -
+    breakpoint_id: beam_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bottle_home
+breakpoint_group: beam_theme
+fallback_image_style: bottle_home_responsive

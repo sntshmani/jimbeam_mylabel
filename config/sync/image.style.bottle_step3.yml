@@ -1,0 +1,15 @@
+uuid: ffae405f-2fb0-40bd-b0e4-e5126f7fb704
+langcode: en
+status: true
+dependencies: {  }
+name: bottle_step3
+label: 'Bottle Step 3'
+effects:
+  3d006e7c-8faa-4d6e-b0ef-5ed347fba8d3:
+    uuid: 3d006e7c-8faa-4d6e-b0ef-5ed347fba8d3
+    id: image_scale
+    weight: 1
+    data:
+      width: 181
+      height: 503
+      upscale: false

@@ -1,0 +1,31 @@
+uuid: c239499d-ae92-4821-92ea-53a0cb4eeffa
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - beam_theme
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: beam_theme_local_tasks
+theme: beam_theme
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

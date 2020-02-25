@@ -1,0 +1,25 @@
+uuid: 09367949-5f6c-4b69-af4f-13072e965887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_footer.field_body
+    - paragraphs.paragraphs_type.block_footer
+  module:
+    - text
+id: paragraph.block_footer.default
+targetEntityType: paragraph
+bundle: block_footer
+mode: default
+content:
+  field_body:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

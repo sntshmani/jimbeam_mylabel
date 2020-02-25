@@ -1,0 +1,15 @@
+uuid: fe6bb696-732d-457a-98b8-72f983e00568
+langcode: en
+status: true
+dependencies: {  }
+name: label_responsive
+label: 'Label responsive'
+effects:
+  42f68153-05bf-4ee8-ab0c-f602fc56f37c:
+    uuid: 42f68153-05bf-4ee8-ab0c-f602fc56f37c
+    id: image_scale
+    weight: 1
+    data:
+      width: 768
+      height: 556
+      upscale: false

@@ -1,0 +1,9 @@
+uuid: bf54c0a5-7630-4645-b8d7-1106a0dbafd5
+langcode: en
+status: true
+dependencies: {  }
+id: block_body
+label: Body
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

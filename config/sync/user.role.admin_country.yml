@@ -1,0 +1,37 @@
+uuid: 663b6063-7c07-444c-b20c-77a13d55c2b0
+langcode: es
+status: true
+dependencies: {  }
+id: admin_country
+label: 'Admin Country'
+weight: 4
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access toolbar'
+  - 'add code entities'
+  - 'add order entities'
+  - 'administer code entities'
+  - 'administer coupon entities'
+  - 'administer customer entities'
+  - 'administer order entities'
+  - 'administer personalise entities'
+  - 'complete personalise entities'
+  - 'delete personalise entities'
+  - 'edit customer entities'
+  - 'edit own country entities'
+  - 'export code list'
+  - 'export customer list'
+  - 'export order list'
+  - 'generate codes'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use text format simple_html'
+  - 'view beam_results in toolbar'
+  - 'view code entities'
+  - 'view country entities'
+  - 'view coupon entities'
+  - 'view customer entities'
+  - 'view order entities'
+  - 'view personalise entities'
+  - 'view the administration theme'

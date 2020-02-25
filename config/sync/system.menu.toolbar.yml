@@ -1,0 +1,8 @@
+uuid: b9d4f916-27da-417b-b978-4c50bc157bc2
+langcode: en
+status: true
+dependencies: {  }
+id: toolbar
+label: Toolbar
+description: 'Menu administration'
+locked: false

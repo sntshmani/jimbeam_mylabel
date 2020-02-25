@@ -1,0 +1,30 @@
+uuid: 905b1f56-5f3a-400b-b612-843bac2743f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_display
+field_name: field_display
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 1col
+      label: '1 column'
+    -
+      value: 2col
+      label: '2 columns'
+    -
+      value: full
+      label: 'Full width'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

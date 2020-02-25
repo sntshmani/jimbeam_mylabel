@@ -1,0 +1,15 @@
+uuid: a002016f-f6ad-412b-8fb2-9c39aa8db320
+langcode: en
+status: true
+dependencies: {  }
+name: bottle_home
+label: 'Bottle home'
+effects:
+  9ba79647-712e-4810-abae-08c18eed1991:
+    uuid: 9ba79647-712e-4810-abae-08c18eed1991
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 1000
+      upscale: false

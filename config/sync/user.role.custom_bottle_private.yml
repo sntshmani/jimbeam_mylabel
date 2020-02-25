@@ -1,0 +1,19 @@
+uuid: 2508e345-e9cb-421e-bfe3-5888df2b63f1
+langcode: en
+status: true
+dependencies: {  }
+id: custom_bottle_private
+label: 'Custom bottle private'
+weight: 3
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'add order entities'
+  - 'administer order entities'
+  - 'custom bottle private'
+  - 'edit customer entities'
+  - 'export order list'
+  - 'view beam_results in toolbar'
+  - 'view customer entities'
+  - 'view order entities'
+  - 'view the administration theme'

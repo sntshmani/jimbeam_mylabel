@@ -1,0 +1,46 @@
+uuid: 075d20eb-a7b2-45d0-9553-d6a39bb9f07d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blocks
+    - node.type.page
+    - paragraphs.paragraphs_type.block_body
+    - paragraphs.paragraphs_type.block_footer
+    - paragraphs.paragraphs_type.block_image
+    - paragraphs.paragraphs_type.block_thanks
+  module:
+    - entity_reference_revisions
+id: node.page.field_blocks
+field_name: field_blocks
+entity_type: node
+bundle: page
+label: Blocks
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      block_body: block_body
+      block_image: block_image
+      block_footer: block_footer
+      block_thanks: block_thanks
+    target_bundles_drag_drop:
+      block_body:
+        enabled: true
+        weight: 4
+      block_image:
+        enabled: true
+        weight: 5
+      block_footer:
+        enabled: true
+        weight: 6
+      block_thanks:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

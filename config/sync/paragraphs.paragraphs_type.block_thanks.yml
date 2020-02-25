@@ -1,0 +1,9 @@
+uuid: 34dcd986-d6d6-4030-8015-d86b9a820054
+langcode: en
+status: true
+dependencies: {  }
+id: block_thanks
+label: Thanks
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+uuid: 5123aceb-6c38-4152-9535-b441200de22c
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.order_comment
+    - field.field.comment.order_comment.field_order_comment_body
+id: comment.order_comment.default
+targetEntityType: comment
+bundle: order_comment
+mode: default
+content:
+  field_order_comment_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  langcode: true
+  links: true

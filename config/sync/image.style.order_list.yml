@@ -1,0 +1,15 @@
+uuid: 17787426-334e-4fef-9b9e-36e6f7f38cd4
+langcode: en
+status: true
+dependencies: {  }
+name: order_list
+label: 'Order list'
+effects:
+  0c93a431-542f-46a6-ab84-a9cabcd9e8a7:
+    uuid: 0c93a431-542f-46a6-ab84-a9cabcd9e8a7
+    id: image_scale
+    weight: 1
+    data:
+      width: 160
+      height: null
+      upscale: false

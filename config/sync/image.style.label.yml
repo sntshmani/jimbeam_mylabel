@@ -1,0 +1,15 @@
+uuid: 0cd4f2e1-7c08-4a21-8404-16c2f0817ebe
+langcode: en
+status: true
+dependencies: {  }
+name: label
+label: Label
+effects:
+  afb22654-bf3d-4c1c-98b7-6b1eaed26352:
+    uuid: afb22654-bf3d-4c1c-98b7-6b1eaed26352
+    id: image_scale
+    weight: 2
+    data:
+      width: 965
+      height: 695
+      upscale: false

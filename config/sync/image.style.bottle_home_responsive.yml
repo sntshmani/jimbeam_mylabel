@@ -1,0 +1,15 @@
+uuid: 816607b0-1bdb-4fc1-bf83-a0c0ff431cc6
+langcode: en
+status: true
+dependencies: {  }
+name: bottle_home_responsive
+label: 'Bottle home responsive'
+effects:
+  8166303d-ff1b-44dd-86dc-2f16d9a4bcf8:
+    uuid: 8166303d-ff1b-44dd-86dc-2f16d9a4bcf8
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 400
+      upscale: false

@@ -1,0 +1,25 @@
+uuid: f03166d3-66b9-413d-96cd-cd2a438341ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - beam_theme
+id: beam_theme_menu_main
+theme: beam_theme
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

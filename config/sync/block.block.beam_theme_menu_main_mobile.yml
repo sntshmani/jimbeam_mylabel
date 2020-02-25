@@ -1,0 +1,25 @@
+uuid: c9d7c468-59fc-4142-9aec-7b570e17feda
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main-mobile
+  module:
+    - system
+  theme:
+    - beam_theme
+id: beam_theme_menu_main_mobile
+theme: beam_theme
+region: header
+weight: -1
+provider: null
+plugin: 'system_menu_block:main-mobile'
+settings:
+  id: 'system_menu_block:main-mobile'
+  label: 'Main mobile'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

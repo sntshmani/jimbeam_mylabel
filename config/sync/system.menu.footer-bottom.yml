@@ -1,0 +1,8 @@
+uuid: bc9ca70d-a221-4361-b460-0afc16f0acf0
+langcode: en
+status: true
+dependencies: {  }
+id: footer-bottom
+label: 'Footer bottom'
+description: 'Menu footer bottom'
+locked: false

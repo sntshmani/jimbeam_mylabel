@@ -1,0 +1,20 @@
+uuid: 119589c0-d981-448b-84c8-728f7992113a
+langcode: en
+status: true
+dependencies:
+  module:
+    - beam_order
+    - comment
+id: beam_order.field_order_comments
+field_name: field_order_comments
+entity_type: beam_order
+type: comment
+settings:
+  comment_type: order_comment
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

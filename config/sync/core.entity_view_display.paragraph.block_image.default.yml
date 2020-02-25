@@ -1,0 +1,35 @@
+uuid: ef767a88-a2a2-4f5f-9486-16f9c168639c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_image.field_image
+    - field.field.paragraph.block_image.field_image_no_photo
+    - paragraphs.paragraphs_type.block_image
+    - responsive_image.styles.bottle_home
+  module:
+    - responsive_image
+id: paragraph.block_image.default
+targetEntityType: paragraph
+bundle: block_image
+mode: default
+content:
+  field_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: bottle_home
+      image_link: ''
+    third_party_settings: {  }
+  field_image_no_photo:
+    type: responsive_image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: bottle_home
+      image_link: ''
+    third_party_settings: {  }
+hidden: {  }

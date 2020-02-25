@@ -1,0 +1,26 @@
+uuid: 04d468f5-f2e2-46c1-863a-1a731637039d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_country
+  module:
+    - user
+id: user.user.field_country
+field_name: field_country
+entity_type: user
+bundle: user
+label: Country
+description: 'Select default country for user'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:beam_country'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

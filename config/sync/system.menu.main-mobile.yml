@@ -1,0 +1,8 @@
+uuid: 42839f70-652e-41a1-8671-6717bc140886
+langcode: en
+status: true
+dependencies: {  }
+id: main-mobile
+label: 'Main mobile'
+description: 'Site section links mobile'
+locked: false
