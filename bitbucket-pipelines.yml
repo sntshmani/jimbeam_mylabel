@@ -1,0 +1,101 @@
+image: kroniak/ssh-client
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: deploy to staging
+          image: kroniak/ssh-client
+          deployment: staging
+          script:
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; git pull'
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; ansible-playbook -i inventory/staging site.yml --tags deploy'
+    staging:
+      - step:
+          name: deploy to staging
+          image: kroniak/ssh-client
+          deployment: staging
+          script:
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; git pull'
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; ansible-playbook -i inventory/staging site.yml --tags deploy'
+    development:
+      - step:
+          name: deploy to staging
+          image: kroniak/ssh-client
+          deployment: test
+          script:
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; git pull'
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; ansible-playbook -i inventory/development site.yml --tags deploy'
+  custom:
+    delete_db_staging:
+      - step:
+          name: drop db in staging
+          image: kroniak/ssh-client
+          script:
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; git pull'
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; ansible-playbook -i inventory/staging site.yml -e delete_db=True'
+
+    export_db_staging:
+      - step:
+          name: export db in staging
+          image: kroniak/ssh-client
+          deployment: staging
+          script:
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; git pull'
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; ansible-playbook -i inventory/staging export.yml --tags drupal-sync-databases'
+
+    import_db_staging:
+      - step:
+          name: import db in staging
+          image: kroniak/ssh-client
+          deployment: staging
+          script:
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; git pull'
+            - |
+                ssh mradmin@devops.mrmilu.com \
+                -o "StrictHostKeyChecking no" \
+                -o "UserKnownHostsFile=/dev/null" \
+                'cd /data/provision/mybeamlabel.provision; ansible-playbook -i inventory/staging import.yml --tags drupal-sync-databases'
