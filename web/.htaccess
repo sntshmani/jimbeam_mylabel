@@ -62,7 +62,7 @@ AddEncoding gzip svgz
 # not accessed by the top level URL (i.e.: http://example.com/drupal/ instead of
 # http://example.com/), the path to index.php will need to be adjusted.
 <IfModule !mod_rewrite.c>
-  FallbackResource /index.php
+  FallbackResource /web/index.php
 </IfModule>
 
 # Various rewrite rules.
