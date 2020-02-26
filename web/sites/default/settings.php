@@ -780,12 +780,12 @@ $settings['entity_update_backup'] = TRUE;
 $settings['config_sync_directory'] = '../config/sync';
 $databases['default']['default'] = array (
   'database' => 'mybeamlabel',
-  'username' => 'mybeamlabel',
-  'password' => 'password',
+  'username' => 'adminparkar',
+  'password' => 'parkar',
   'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
+  'host' => 'mysql.dev.svc',
+  'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-include dirname(__FILE__) . "/system-settings.php";
+//include dirname(__FILE__) . "/system-settings.php";
