@@ -32,7 +32,7 @@
     "concat": "^1.0.3",
     "file-loader": "^4.2.0",
     "glob": "^7.1.4",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "mini-css-extract-plugin": "^0.8.0",
     "path": "^0.12.7",
     "rimraf": "^3.0.0",
